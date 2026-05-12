@@ -1,0 +1,39 @@
+.footer {
+  background: #142320;
+  margin-top: auto;
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 15px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.copy,
+.links {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+@media (max-width: 620px) {
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
