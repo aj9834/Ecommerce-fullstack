@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { addToCart } from "../api/cartApi";
 import { getAllProducts, searchProducts } from "../api/productApi";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/products.module.css";
@@ -9,14 +10,11 @@ export default function ProductsPage() {
   const [error, setError] = useState("");
   const [keyword, setKeyword] = useState("");
   const [category, setCategory] = useState("");
+  const [addingProductId, setAddingProductId] = useState(null);
+  const [addedProductId, setAddedProductId] = useState(null);
   const navigate = useNavigate();
 
-  // Load all products on first render
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  const fetchProducts = async () => {
+  async function fetchProducts() {
     setLoading(true);
     setError("");
     try {
@@ -27,7 +25,27 @@ export default function ProductsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }
+
+  // Load all products on first render
+  useEffect(() => {
+    let isMounted = true;
+
+    getAllProducts()
+      .then((res) => {
+        if (isMounted) setProducts(res.data);
+      })
+      .catch(() => {
+        if (isMounted) setError("Failed to load products");
+      })
+      .finally(() => {
+        if (isMounted) setLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -47,6 +65,35 @@ export default function ProductsPage() {
     setKeyword("");
     setCategory("");
     fetchProducts();
+  };
+
+  const handleAddToCart = async (e, product) => {
+    e.stopPropagation();
+
+    if (
+      product.stock <= 0 ||
+      addingProductId === product.productId ||
+      addedProductId === product.productId
+    ) return;
+
+    setAddingProductId(product.productId);
+    setError("");
+
+    try {
+      await addToCart({ productId: product.productId, quantity: 1 });
+      setAddedProductId(product.productId);
+      window.dispatchEvent(new Event("cart:updated"));
+      setTimeout(() => {
+        setAddedProductId((currentId) =>
+          currentId === product.productId ? null : currentId
+        );
+      }, 1800);
+    } catch (err) {
+      const msg = err.response?.data?.error || "Failed to add product to cart";
+      setError(msg);
+    } finally {
+      setAddingProductId(null);
+    }
   };
 
   // Get unique categories from loaded products for the dropdown
@@ -117,6 +164,22 @@ export default function ProductsPage() {
                     {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
                   </span>
                 </div>
+                <button
+                  type="button"
+                  className={styles.cartBtn}
+                  onClick={(e) => handleAddToCart(e, product)}
+                  disabled={
+                    product.stock <= 0 ||
+                    addingProductId === product.productId ||
+                    addedProductId === product.productId
+                  }
+                >
+                  {addedProductId === product.productId
+                    ? "Added"
+                    : addingProductId === product.productId
+                      ? "Adding..."
+                      : "Add to Cart"}
+                </button>
               </div>
             </div>
           ))}

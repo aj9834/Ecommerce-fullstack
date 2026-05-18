@@ -112,6 +112,9 @@
 
 .cardBody {
   padding: 16px;
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
 }
 
 .category {
@@ -147,6 +150,7 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 12px;
+  margin-top: auto;
 }
 
 .price {
@@ -160,6 +164,31 @@
   color: #63716d;
   font-weight: 750;
   text-align: right;
+}
+
+.cartBtn {
+  width: 100%;
+  min-height: 42px;
+  margin-top: 14px;
+  border: 1px solid #0f766e;
+  border-radius: 8px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.cartBtn:hover:not(:disabled) {
+  background: #115e59;
+  border-color: #115e59;
+  transform: translateY(-1px);
+}
+
+.cartBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .message,

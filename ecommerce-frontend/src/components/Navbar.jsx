@@ -11,8 +11,14 @@ export default function Navbar() {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    if (user) {
+    const refreshCartCount = () => {
       getCart().then(res => setCartCount(res.data.totalItems || 0)).catch(() => {});
+    };
+
+    if (user) {
+      refreshCartCount();
+      window.addEventListener("cart:updated", refreshCartCount);
+      return () => window.removeEventListener("cart:updated", refreshCartCount);
     }
   }, [user, location.pathname]);
 
