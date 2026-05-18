@@ -7,6 +7,8 @@ USE ecommerce_db;
 SET FOREIGN_KEY_CHECKS = 0;
 
 DROP TABLE IF EXISTS cart_items;
+DROP TABLE IF EXISTS order_items;
+DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS carts;
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS users;
@@ -64,6 +66,56 @@ CREATE TABLE cart_items (
         REFERENCES carts (cart_id)
         ON DELETE CASCADE,
     CONSTRAINT fk_cart_items_product
+        FOREIGN KEY (product_id)
+        REFERENCES products (product_id)
+        ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE orders (
+    order_id BIGINT NOT NULL AUTO_INCREMENT,
+    user_id BIGINT NOT NULL,
+    shipping_name VARCHAR(255) NOT NULL,
+    shipping_phone VARCHAR(255) NOT NULL,
+    shipping_address VARCHAR(1000) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    state VARCHAR(255) NOT NULL,
+    pincode VARCHAR(255) NOT NULL,
+    payment_method VARCHAR(255) NOT NULL,
+    status VARCHAR(255) NOT NULL,
+    payment_status VARCHAR(255) NOT NULL,
+    subtotal DECIMAL(38, 2) NOT NULL,
+    tax_amount DECIMAL(38, 2) NOT NULL,
+    delivery_fee DECIMAL(38, 2) NOT NULL,
+    total_amount DECIMAL(38, 2) NOT NULL,
+    total_price DECIMAL(38, 2) NOT NULL,
+    created_at DATETIME(6) NOT NULL,
+    updated_at DATETIME(6) NOT NULL,
+    PRIMARY KEY (order_id),
+    KEY idx_orders_user_id (user_id),
+    CONSTRAINT fk_orders_user
+        FOREIGN KEY (user_id)
+        REFERENCES users (user_id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE order_items (
+    order_item_id BIGINT NOT NULL AUTO_INCREMENT,
+    order_id BIGINT NOT NULL,
+    product_id BIGINT NOT NULL,
+    product_name VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255),
+    quantity INT NOT NULL,
+    unit_price DECIMAL(38, 2) NOT NULL,
+    price DECIMAL(38, 2) NOT NULL,
+    item_total DECIMAL(38, 2) NOT NULL,
+    PRIMARY KEY (order_item_id),
+    KEY idx_order_items_order_id (order_id),
+    KEY idx_order_items_product_id (product_id),
+    CONSTRAINT fk_order_items_order
+        FOREIGN KEY (order_id)
+        REFERENCES orders (order_id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_order_items_product
         FOREIGN KEY (product_id)
         REFERENCES products (product_id)
         ON DELETE RESTRICT

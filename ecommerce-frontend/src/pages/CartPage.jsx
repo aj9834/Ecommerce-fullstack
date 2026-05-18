@@ -7,21 +7,26 @@ export default function CartPage() {
   const [cart, setCart] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [checkingOut, setCheckingOut] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => { fetchCart(); }, []);
+  useEffect(() => {
+    let isMounted = true;
 
-  const fetchCart = async () => {
-    try {
-      const res = await getCart();
-      setCart(res.data);
-    } catch {
-      setError("Failed to load cart.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    getCart()
+      .then((res) => {
+        if (isMounted) setCart(res.data);
+      })
+      .catch(() => {
+        if (isMounted) setError("Failed to load cart.");
+      })
+      .finally(() => {
+        if (isMounted) setLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const handleUpdateQty = async (cartItemId, newQty) => {
     try {
@@ -52,12 +57,7 @@ export default function CartPage() {
   };
 
   const handleCheckout = async () => {
-    setCheckingOut(true);
-    // Orders module — coming next session
-    setTimeout(() => {
-      alert("Order placed successfully! (Orders module coming soon)");
-      setCheckingOut(false);
-    }, 1200);
+    navigate("/checkout");
   };
 
   if (loading) return <div className={styles.center}>Loading cart...</div>;
@@ -167,9 +167,8 @@ export default function CartPage() {
             <button
               className={styles.checkoutBtn}
               onClick={handleCheckout}
-              disabled={checkingOut}
             >
-              {checkingOut ? "Placing Order..." : "Proceed to Checkout"}
+              Proceed to Checkout
             </button>
 
             <button

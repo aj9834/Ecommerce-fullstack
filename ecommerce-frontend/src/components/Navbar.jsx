@@ -41,6 +41,8 @@ export default function Navbar() {
             Cart
             {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
           </button>
+          <button className={`${styles.link} ${isActive("/orders") ? styles.active : ""}`}
+            onClick={() => navigate("/orders")}>Orders</button>
           {user?.role === "ADMIN" && (
             <button className={`${styles.link} ${styles.adminLink} ${isActive("/admin") ? styles.active : ""}`}
               onClick={() => navigate("/admin")}>

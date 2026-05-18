@@ -5,6 +5,8 @@ import DashboardPage from "../pages/DashboardPage";
 import ProductsPage from "../pages/ProductsPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import CartPage from "../pages/CartPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import OrdersPage from "../pages/OrdersPage";
 import AdminPage from "../pages/admin/AdminPage";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AdminRoute from "../components/AdminRoute";
@@ -28,6 +30,12 @@ export default function AppRoutes() {
       }/>
       <Route path="/cart" element={
         <ProtectedRoute><Layout><CartPage /></Layout></ProtectedRoute>
+      }/>
+      <Route path="/checkout" element={
+        <ProtectedRoute><Layout><CheckoutPage /></Layout></ProtectedRoute>
+      }/>
+      <Route path="/orders" element={
+        <ProtectedRoute><Layout><OrdersPage /></Layout></ProtectedRoute>
       }/>
       <Route path="/admin/*" element={
         <AdminRoute><AdminPage /></AdminRoute>
