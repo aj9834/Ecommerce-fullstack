@@ -43,6 +43,8 @@ export default function Navbar() {
           </button>
           <button className={`${styles.link} ${isActive("/orders") ? styles.active : ""}`}
             onClick={() => navigate("/orders")}>Orders</button>
+          <button className={`${styles.link} ${isActive("/profile") ? styles.active : ""}`}
+            onClick={() => navigate("/profile")}>Profile</button>
           {user?.role === "ADMIN" && (
             <button className={`${styles.link} ${styles.adminLink} ${isActive("/admin") ? styles.active : ""}`}
               onClick={() => navigate("/admin")}>
@@ -52,7 +54,7 @@ export default function Navbar() {
         </div>
 
         <div className={styles.right}>
-          <span className={styles.userName}>{user?.name}</span>
+          <button className={styles.userName} onClick={() => navigate("/profile")}>{user?.name}</button>
           <button className={styles.logoutBtn} onClick={() => { logout(); navigate("/login"); }}>
             Logout
           </button>

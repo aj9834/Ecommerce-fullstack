@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { adminGetCarts } from "../../api/adminApi";
 import styles from "../../styles/admin.module.css";
 
@@ -7,14 +7,14 @@ export default function AdminCarts() {
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
 
-  useEffect(() => { load(); }, []);
-
-  const load = async () => {
+  const load = useCallback(async () => {
     try {
       const res = await adminGetCarts();
       setCarts(res.data);
     } finally { setLoading(false); }
-  };
+  }, []);
+
+  useEffect(() => { load(); }, [load]);
 
   const toggle = (id) => setExpanded(expanded === id ? null : id);
 

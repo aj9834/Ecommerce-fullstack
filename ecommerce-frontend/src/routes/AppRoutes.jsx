@@ -7,6 +7,7 @@ import ProductDetailPage from "../pages/ProductDetailPage";
 import CartPage from "../pages/CartPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import OrdersPage from "../pages/OrdersPage";
+import ProfilePage from "../pages/ProfilePage";
 import AdminPage from "../pages/admin/AdminPage";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AdminRoute from "../components/AdminRoute";
@@ -36,6 +37,9 @@ export default function AppRoutes() {
       }/>
       <Route path="/orders" element={
         <ProtectedRoute><Layout><OrdersPage /></Layout></ProtectedRoute>
+      }/>
+      <Route path="/profile" element={
+        <ProtectedRoute><Layout><ProfilePage /></Layout></ProtectedRoute>
       }/>
       <Route path="/admin/*" element={
         <AdminRoute><AdminPage /></AdminRoute>

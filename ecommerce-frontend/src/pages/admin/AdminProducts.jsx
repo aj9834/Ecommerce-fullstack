@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   adminGetProducts, adminCreateProduct,
   adminUpdateProduct, adminDeleteProduct
@@ -19,15 +19,17 @@ export default function AdminProducts() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => { load(); }, []);
-
-  const load = async () => {
+  const load = useCallback(async () => {
     try {
       const res = await adminGetProducts();
       setProducts(res.data);
     } catch { setError("Failed to load products"); }
     finally { setLoading(false); }
-  };
+  }, []);
+
+  useEffect(() => {
+    queueMicrotask(load);
+  }, [load]);
 
   const openAdd = () => { setForm(EMPTY_FORM); setEditingId(null); setShowForm(true); };
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { adminGetUsers, adminDeleteUser } from "../../api/adminApi";
 import styles from "../../styles/admin.module.css";
 
@@ -6,14 +6,14 @@ export default function AdminUsers() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { load(); }, []);
-
-  const load = async () => {
+  const load = useCallback(async () => {
     try {
       const res = await adminGetUsers();
       setUsers(res.data);
     } finally { setLoading(false); }
-  };
+  }, []);
+
+  useEffect(() => { load(); }, [load]);
 
   const handleDelete = async (id, name) => {
     if (!window.confirm(`Delete user "${name}"? This cannot be undone.`)) return;

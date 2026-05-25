@@ -57,4 +57,52 @@ public class AuthServiceImpl implements AuthService {
 		String token = jwtUtil.generateToken(user.getEmail());
 		return new AuthResponse(token, user.getName(), user.getEmail(), user.getRole());
 	}
+
+	@Override
+	public ProfileResponse getProfile(String email) {
+		User user = getUserByEmail(email);
+		return toProfileResponse(null, user);
+	}
+
+	@Override
+	public ProfileResponse updateProfile(String email, UpdateProfileRequest request) {
+		User user = getUserByEmail(email);
+		String updatedName = request.getName().trim();
+		String updatedEmail = request.getEmail().trim().toLowerCase();
+
+		userRepository.findByEmail(updatedEmail)
+				.filter(existing -> !existing.getUserId().equals(user.getUserId()))
+				.ifPresent(existing -> {
+					throw new RuntimeException("Email already in use");
+				});
+
+		if (hasText(request.getNewPassword())) {
+			if (!hasText(request.getCurrentPassword())
+					|| !passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
+				throw new RuntimeException("Current password is incorrect");
+			}
+			user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+		}
+
+		user.setName(updatedName);
+		user.setEmail(updatedEmail);
+		User savedUser = userRepository.save(user);
+		String token = jwtUtil.generateToken(savedUser.getEmail());
+
+		return toProfileResponse(token, savedUser);
+	}
+
+	private User getUserByEmail(String email) {
+		return userRepository.findByEmail(email)
+				.orElseThrow(() -> new RuntimeException("User not found"));
+	}
+
+	private ProfileResponse toProfileResponse(String token, User user) {
+		return new ProfileResponse(token, user.getUserId(), user.getName(), user.getEmail(), user.getRole(),
+				user.getCreatedAt(), user.getUpdatedAt());
+	}
+
+	private boolean hasText(String value) {
+		return value != null && !value.trim().isEmpty();
+	}
 }

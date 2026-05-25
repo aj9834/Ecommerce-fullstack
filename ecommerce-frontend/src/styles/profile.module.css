@@ -1,0 +1,297 @@
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 42px 24px 56px;
+}
+
+.center {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  color: #63716d;
+  font-weight: 800;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.header h1 {
+  margin: 0;
+  color: #142320;
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.role {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #b8e2da;
+  background: #dff5f0;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.summary,
+.panel {
+  background: #ffffff;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+}
+
+.summary {
+  padding: 28px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: #142320;
+  color: #ffcf66;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.summary h2 {
+  margin: 0 0 6px;
+  color: #142320;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.summary p {
+  margin: 0 0 24px;
+  color: #63716d;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.metaList {
+  display: grid;
+  gap: 12px;
+}
+
+.metaList div {
+  padding: 14px;
+  border-radius: 8px;
+  background: #f4f7f2;
+  border: 1px solid #e0ebe7;
+}
+
+.metaList span {
+  display: block;
+  margin-bottom: 5px;
+  color: #63716d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.metaList strong {
+  color: #142320;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.panelHeader {
+  margin-bottom: 22px;
+}
+
+.panelHeader h2 {
+  margin: 0 0 6px;
+  color: #142320;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.panelHeader p {
+  margin: 0;
+  color: #63716d;
+  font-size: 14px;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.passwordGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  color: #263d38;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 15px;
+  border: 1px solid #cad8d4;
+  border-radius: 8px;
+  outline: none;
+  color: #142320;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.field input::placeholder {
+  color: #93a19d;
+}
+
+.field input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.16);
+  background: #fbfffd;
+}
+
+.field span {
+  color: #d92d20;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.primary,
+.secondary {
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.primary {
+  border: 1px solid #ff6b4a;
+  background: #ff6b4a;
+  color: #ffffff;
+}
+
+.primary:hover {
+  background: #ef5637;
+  transform: translateY(-1px);
+}
+
+.primary:disabled {
+  border-color: #9aa8a5;
+  background: #9aa8a5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary {
+  border: 1px solid #cad8d4;
+  background: #ffffff;
+  color: #263d38;
+}
+
+.secondary:hover {
+  border-color: #9ab4ad;
+  background: #f4f7f2;
+}
+
+.success,
+.errorBanner {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.success {
+  border: 1px solid #b8e2da;
+  background: #dff5f0;
+  color: #0f766e;
+}
+
+.errorBanner {
+  border: 1px solid #ffcdc2;
+  background: #fff2ee;
+  color: #b42318;
+}
+
+@media (max-width: 860px) {
+  .grid,
+  .passwordGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 30px 18px 44px;
+  }
+
+  .summary,
+  .panel {
+    padding: 22px;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}

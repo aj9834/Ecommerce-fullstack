@@ -80,9 +80,17 @@
 }
 
 .userName {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
   font-size: 14px;
   color: #63716d;
   font-weight: 750;
+  padding: 7px 0;
+}
+
+.userName:hover {
+  color: #0f766e;
 }
 
 .logoutBtn {
