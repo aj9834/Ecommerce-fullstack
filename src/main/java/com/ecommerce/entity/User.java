@@ -17,6 +17,10 @@ public class User {
 	private String password;
 	@Column(nullable = false)
 	private String role = "USER";
+	@Column(name = "reset_password_token")
+	private String resetPasswordToken;
+	@Column(name = "reset_password_token_expires_at")
+	private LocalDateTime resetPasswordTokenExpiresAt;
 	@Column(nullable = false, updatable = false)
 	private LocalDateTime createdAt;
 	@Column(nullable = false)
@@ -63,6 +67,16 @@ public class User {
 	}
 
 	@java.lang.SuppressWarnings("all")
+	public String getResetPasswordToken() {
+		return this.resetPasswordToken;
+	}
+
+	@java.lang.SuppressWarnings("all")
+	public LocalDateTime getResetPasswordTokenExpiresAt() {
+		return this.resetPasswordTokenExpiresAt;
+	}
+
+	@java.lang.SuppressWarnings("all")
 	public LocalDateTime getCreatedAt() {
 		return this.createdAt;
 	}
@@ -95,6 +109,16 @@ public class User {
 	@java.lang.SuppressWarnings("all")
 	public void setRole(final String role) {
 		this.role = role;
+	}
+
+	@java.lang.SuppressWarnings("all")
+	public void setResetPasswordToken(final String resetPasswordToken) {
+		this.resetPasswordToken = resetPasswordToken;
+	}
+
+	@java.lang.SuppressWarnings("all")
+	public void setResetPasswordTokenExpiresAt(final LocalDateTime resetPasswordTokenExpiresAt) {
+		this.resetPasswordTokenExpiresAt = resetPasswordTokenExpiresAt;
 	}
 
 	@java.lang.SuppressWarnings("all")

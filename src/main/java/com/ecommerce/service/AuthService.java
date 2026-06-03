@@ -7,6 +7,10 @@ public interface AuthService {
 
 	AuthResponse login(LoginRequest request);
 
+	ForgotPasswordResponse forgotPassword(ForgotPasswordRequest request);
+
+	void resetPassword(ResetPasswordRequest request);
+
 	ProfileResponse getProfile(String email);
 
 	ProfileResponse updateProfile(String email, UpdateProfileRequest request);

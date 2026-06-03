@@ -33,7 +33,8 @@ public class SecurityConfig {
 				.sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				.authorizeHttpRequests(auth -> auth
 						// Public
-						.requestMatchers("/api/auth/register", "/api/auth/login").permitAll()
+						.requestMatchers("/api/auth/register", "/api/auth/login", "/api/auth/forgot-password",
+								"/api/auth/reset-password").permitAll()
 						// Products GET — public browsing
 						.requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
 						// Admin only routes

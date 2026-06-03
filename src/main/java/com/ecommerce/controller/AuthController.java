@@ -1,9 +1,12 @@
 package com.ecommerce.controller;
 
 import com.ecommerce.dto.AuthResponse;
+import com.ecommerce.dto.ForgotPasswordRequest;
+import com.ecommerce.dto.ForgotPasswordResponse;
 import com.ecommerce.dto.LoginRequest;
 import com.ecommerce.dto.ProfileResponse;
 import com.ecommerce.dto.RegisterRequest;
+import com.ecommerce.dto.ResetPasswordRequest;
 import com.ecommerce.dto.UpdateProfileRequest;
 import com.ecommerce.service.AuthService;
 import jakarta.validation.Valid;
@@ -35,6 +38,17 @@ public class AuthController {
 	@PostMapping("/login")
 	public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
 		return ResponseEntity.ok(authService.login(request));
+	}
+
+	@PostMapping("/forgot-password")
+	public ResponseEntity<ForgotPasswordResponse> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+		return ResponseEntity.ok(authService.forgotPassword(request));
+	}
+
+	@PostMapping("/reset-password")
+	public ResponseEntity<Void> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+		authService.resetPassword(request);
+		return ResponseEntity.noContent().build();
 	}
 
 	@GetMapping("/me")

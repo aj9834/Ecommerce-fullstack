@@ -190,6 +190,49 @@
   background: #fbfffd;
 }
 
+.passwordControl {
+  position: relative;
+}
+
+.passwordControl input {
+  padding-right: 48px;
+}
+
+.eyeButton {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #63716d;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s, color 0.2s;
+}
+
+.eyeButton:hover,
+.eyeButton:focus-visible {
+  background: #eaf4f1;
+  color: #0f766e;
+  outline: none;
+}
+
+.eyeButton svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
 .field span {
   color: #d92d20;
   font-size: 12px;

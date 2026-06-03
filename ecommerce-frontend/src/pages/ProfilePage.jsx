@@ -35,10 +35,29 @@ const normalizeErrors = (data) => {
   return data;
 };
 
+const EyeIcon = ({ hidden }) => (
+  <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+    {hidden ? (
+      <>
+        <path d="M3 3l18 18" />
+        <path d="M10.7 10.7a2 2 0 0 0 2.6 2.6" />
+        <path d="M9.9 5.2A9.6 9.6 0 0 1 12 5c5 0 8.5 4.4 9.7 6.2a1.5 1.5 0 0 1 0 1.6 17.9 17.9 0 0 1-2.4 3" />
+        <path d="M6.6 6.8a18.5 18.5 0 0 0-4.3 4.4 1.5 1.5 0 0 0 0 1.6C3.5 14.6 7 19 12 19a9.3 9.3 0 0 0 4.3-1" />
+      </>
+    ) : (
+      <>
+        <path d="M2.3 11.2C3.5 9.4 7 5 12 5s8.5 4.4 9.7 6.2a1.5 1.5 0 0 1 0 1.6C20.5 14.6 17 19 12 19s-8.5-4.4-9.7-6.2a1.5 1.5 0 0 1 0-1.6Z" />
+        <path d="M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z" />
+      </>
+    )}
+  </svg>
+);
+
 export default function ProfilePage() {
   const { user, updateUser } = useAuth();
   const [profile, setProfile] = useState(user);
   const [form, setForm] = useState({ ...emptyForm, name: user?.name || "", email: user?.email || "" });
+  const [visiblePasswords, setVisiblePasswords] = useState({ currentPassword: false, newPassword: false });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [errors, setErrors] = useState({});
@@ -60,6 +79,10 @@ export default function ProfilePage() {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "", general: "" });
     setSuccess("");
+  };
+
+  const togglePasswordVisibility = (fieldName) => {
+    setVisiblePasswords((current) => ({ ...current, [fieldName]: !current[fieldName] }));
   };
 
   const handleSubmit = async (e) => {
@@ -148,24 +171,46 @@ export default function ProfilePage() {
             <div className={styles.passwordGrid}>
               <div className={styles.field}>
                 <label>Current password</label>
-                <input
-                  name="currentPassword"
-                  type="password"
-                  placeholder="Required for password change"
-                  value={form.currentPassword}
-                  onChange={handleChange}
-                />
+                <div className={styles.passwordControl}>
+                  <input
+                    name="currentPassword"
+                    type={visiblePasswords.currentPassword ? "text" : "password"}
+                    placeholder="Required for password change"
+                    value={form.currentPassword}
+                    onChange={handleChange}
+                  />
+                  <button
+                    type="button"
+                    className={styles.eyeButton}
+                    onClick={() => togglePasswordVisibility("currentPassword")}
+                    aria-label={`${visiblePasswords.currentPassword ? "Hide" : "Show"} current password`}
+                    title={`${visiblePasswords.currentPassword ? "Hide" : "Show"} current password`}
+                  >
+                    <EyeIcon hidden={visiblePasswords.currentPassword} />
+                  </button>
+                </div>
               </div>
 
               <div className={styles.field}>
                 <label>New password</label>
-                <input
-                  name="newPassword"
-                  type="password"
-                  placeholder="At least 6 characters"
-                  value={form.newPassword}
-                  onChange={handleChange}
-                />
+                <div className={styles.passwordControl}>
+                  <input
+                    name="newPassword"
+                    type={visiblePasswords.newPassword ? "text" : "password"}
+                    placeholder="At least 6 characters"
+                    value={form.newPassword}
+                    onChange={handleChange}
+                  />
+                  <button
+                    type="button"
+                    className={styles.eyeButton}
+                    onClick={() => togglePasswordVisibility("newPassword")}
+                    aria-label={`${visiblePasswords.newPassword ? "Hide" : "Show"} new password`}
+                    title={`${visiblePasswords.newPassword ? "Hide" : "Show"} new password`}
+                  >
+                    <EyeIcon hidden={visiblePasswords.newPassword} />
+                  </button>
+                </div>
                 {errors.newPassword && <span>{errors.newPassword}</span>}
               </div>
             </div>

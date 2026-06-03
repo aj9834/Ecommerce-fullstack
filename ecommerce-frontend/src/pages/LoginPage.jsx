@@ -70,6 +70,9 @@ export default function LoginPage() {
             <input name="password" type="password" placeholder="Enter password" value={form.password} onChange={handleChange} />
             {errors.password && <span className={styles.error}>{errors.password}</span>}
           </div>
+          <div className={styles.formMeta}>
+            <Link to="/forgot-password">Forgot password?</Link>
+          </div>
           <button type="submit" className={styles.btn} disabled={loading}>
             {loading ? "Checking..." : "Continue"}
           </button>

@@ -175,6 +175,19 @@
   transform: none;
 }
 
+.formMeta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+}
+
+.formMeta a {
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
 .error {
   font-size: 12px;
   color: #d92d20;
@@ -189,6 +202,26 @@
   font-size: 14px;
   margin: 0 0 18px;
   border: 1px solid #ffcdc2;
+}
+
+.successBanner {
+  background: #ecfdf5;
+  color: #05603a;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 0 0 18px;
+  border: 1px solid #abefc6;
+}
+
+.successBanner p {
+  margin: 0 0 10px;
+}
+
+.successBanner a {
+  color: #0f766e;
+  font-weight: 850;
+  text-decoration: none;
 }
 
 .switchLink {
