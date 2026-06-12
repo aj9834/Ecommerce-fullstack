@@ -38,14 +38,14 @@ export default function ProductDetailPage() {
     }
   };
 
-  if (loading) return <div className={styles.center}>Loading...</div>;
-  if (error)   return <div className={styles.center}>{error}</div>;
+  if (loading) return <div id="product-detail-loading" className={styles.center}>Loading...</div>;
+  if (error)   return <div id="product-detail-error" className={styles.center}>{error}</div>;
   if (!product) return null;
 
   return (
     <div className={styles.page}>
 
-      <button className={styles.back} onClick={() => navigate("/products")}>
+      <button id="product-detail-back" className={styles.back} onClick={() => navigate("/products")}>
         ← Back to Products
       </button>
 
@@ -62,13 +62,13 @@ export default function ProductDetailPage() {
 
         {/* Right — Info */}
         <div className={styles.info}>
-          <span className={styles.category}>{product.category}</span>
-          <h1 className={styles.name}>{product.name}</h1>
-          <p className={styles.description}>{product.description}</p>
+          <span data-testid="product-detail-category" className={styles.category}>{product.category}</span>
+          <h1 id="product-detail-name" className={styles.name}>{product.name}</h1>
+          <p data-testid="product-detail-description" className={styles.description}>{product.description}</p>
 
           <div className={styles.priceRow}>
-            <span className={styles.price}>₹{product.price}</span>
-            <span className={product.stock > 0 ? styles.inStock : styles.outStock}>
+            <span id="product-detail-price" className={styles.price}>₹{product.price}</span>
+            <span data-testid="product-detail-stock" className={product.stock > 0 ? styles.inStock : styles.outStock}>
               {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
             </span>
           </div>
@@ -79,11 +79,13 @@ export default function ProductDetailPage() {
               <span className={styles.label}>Quantity</span>
               <div className={styles.quantityControl}>
                 <button
+                  id="product-detail-quantity-decrease"
                   className={styles.qBtn}
                   onClick={() => setQuantity(q => Math.max(1, q - 1))}
                 >−</button>
-                <span className={styles.qValue}>{quantity}</span>
+                <span id="product-detail-quantity-value" className={styles.qValue}>{quantity}</span>
                 <button
+                  id="product-detail-quantity-increase"
                   className={styles.qBtn}
                   onClick={() => setQuantity(q => Math.min(product.stock, q + 1))}
                 >+</button>
@@ -92,6 +94,7 @@ export default function ProductDetailPage() {
           )}
 
           <button
+            id="product-detail-add-to-cart"
             className={styles.cartBtn}
             onClick={handleAddToCart}
             disabled={product.stock === 0 || added}

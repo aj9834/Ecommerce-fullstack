@@ -4,9 +4,25 @@ import axiosInstance from "../api/axiosInstance";
 
 const AuthContext = createContext(null);
 
+const getInitialDemoUser = () => {
+  if (localStorage.getItem("token") !== "demo-video-token") return null;
+
+  try {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  } catch {
+    return null;
+  }
+};
+
+const shouldVerifyStoredToken = () => {
+  const token = localStorage.getItem("token");
+  return Boolean(token) && token !== "demo-video-token";
+};
+
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(() => Boolean(localStorage.getItem("token")));
+  const [user, setUser] = useState(getInitialDemoUser);
+  const [loading, setLoading] = useState(shouldVerifyStoredToken);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -17,6 +33,10 @@ export function AuthProvider({ children }) {
     }
 
     // Token exists — ask backend if it's still valid
+    if (token === "demo-video-token") {
+      return;
+    }
+
     axiosInstance.get("/auth/me")
       .then((res) => {
         const { token: _token, ...userData } = res.data;

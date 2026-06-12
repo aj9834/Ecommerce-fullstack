@@ -104,12 +104,13 @@ export default function ProductsPage() {
 
       {/* Header */}
       <div className={styles.header}>
-        <h1 className={styles.title}>Products</h1>
+        <h1 id="products-title" className={styles.title}>Products</h1>
       </div>
 
       {/* Search + Filter Bar */}
       <form onSubmit={handleSearch} className={styles.searchBar}>
         <input
+          id="product-search"
           type="text"
           placeholder="Search products..."
           value={keyword}
@@ -117,6 +118,7 @@ export default function ProductsPage() {
           className={styles.searchInput}
         />
         <select
+          id="product-category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           className={styles.select}
@@ -126,23 +128,25 @@ export default function ProductsPage() {
             <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
-        <button type="submit" className={styles.searchBtn}>Search</button>
-        <button type="button" onClick={handleReset} className={styles.resetBtn}>Reset</button>
+        <button id="product-search-submit" type="submit" className={styles.searchBtn}>Search</button>
+        <button id="product-search-reset" type="button" onClick={handleReset} className={styles.resetBtn}>Reset</button>
       </form>
 
       {/* States */}
-      {loading && <p className={styles.message}>Loading products...</p>}
-      {error && <p className={styles.error}>{error}</p>}
+      {loading && <p id="products-loading" className={styles.message}>Loading products...</p>}
+      {error && <p id="products-error" className={styles.error}>{error}</p>}
       {!loading && !error && products.length === 0 && (
-        <p className={styles.message}>No products found.</p>
+        <p id="products-empty" className={styles.message}>No products found.</p>
       )}
 
       {/* Product Grid */}
       {!loading && !error && (
-        <div className={styles.grid}>
+        <div id="product-grid" className={styles.grid}>
           {products.map((product) => (
             <div
               key={product.productId}
+              data-testid="product-card"
+              data-product-id={product.productId}
               className={styles.card}
               onClick={() => navigate(`/products/${product.productId}`)}
             >
@@ -152,20 +156,21 @@ export default function ProductsPage() {
                 className={styles.image}
               />
               <div className={styles.cardBody}>
-                <span className={styles.category}>{product.category}</span>
-                <h3 className={styles.productName}>{product.name}</h3>
+                <span data-testid="product-category" className={styles.category}>{product.category}</span>
+                <h3 data-testid="product-name" className={styles.productName}>{product.name}</h3>
                 <p className={styles.description}>
                   {product.description?.slice(0, 80)}
                   {product.description?.length > 80 ? "..." : ""}
                 </p>
                 <div className={styles.cardFooter}>
-                  <span className={styles.price}>₹{product.price}</span>
-                  <span className={styles.stock}>
+                  <span data-testid="product-price" className={styles.price}>₹{product.price}</span>
+                  <span data-testid="product-stock" className={styles.stock}>
                     {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
                   </span>
                 </div>
                 <button
                   type="button"
+                  data-testid="add-to-cart"
                   className={styles.cartBtn}
                   onClick={(e) => handleAddToCart(e, product)}
                   disabled={

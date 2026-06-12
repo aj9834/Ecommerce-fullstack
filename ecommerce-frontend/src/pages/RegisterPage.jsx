@@ -26,7 +26,7 @@ export default function RegisterPage() {
       navigate("/dashboard");
     } catch (err) {
       const data = err.response?.data;
-      if (typeof data === "object") setErrors(data);
+      if (data && typeof data === "object") setErrors(data.error ? { general: data.error } : data);
       else setErrors({ general: data?.error || "Registration failed" });
     } finally {
       setLoading(false);
@@ -53,24 +53,24 @@ export default function RegisterPage() {
           <h2 className={styles.title}>Create account</h2>
           <p className={styles.subtitle}>Enter your details to open your store access.</p>
         </div>
-        {errors.general && <p className={styles.errorBanner}>{errors.general}</p>}
+        {errors.general && <p id="register-error" className={styles.errorBanner}>{errors.general}</p>}
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
-            <label>Full name</label>
-            <input name="name" placeholder="Aarav Sharma" value={form.name} onChange={handleChange} />
+            <label htmlFor="register-name">Full name</label>
+            <input id="register-name" name="name" placeholder="Aarav Sharma" value={form.name} onChange={handleChange} required />
             {errors.name && <span className={styles.error}>{errors.name}</span>}
           </div>
           <div className={styles.field}>
-            <label>Email</label>
-            <input name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} />
+            <label htmlFor="register-email">Email</label>
+            <input id="register-email" name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
             {errors.email && <span className={styles.error}>{errors.email}</span>}
           </div>
           <div className={styles.field}>
-            <label>Password</label>
-            <input name="password" type="password" placeholder="At least 6 characters" value={form.password} onChange={handleChange} />
+            <label htmlFor="register-password">Password</label>
+            <input id="register-password" name="password" type="password" placeholder="At least 6 characters" value={form.password} onChange={handleChange} required minLength={6} />
             {errors.password && <span className={styles.error}>{errors.password}</span>}
           </div>
-          <button type="submit" className={styles.btn} disabled={loading}>
+          <button id="register-submit" type="submit" className={styles.btn} disabled={loading}>
             {loading ? "Creating..." : "Create account"}
           </button>
         </form>

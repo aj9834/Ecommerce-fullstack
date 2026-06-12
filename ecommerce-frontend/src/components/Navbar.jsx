@@ -12,6 +12,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const refreshCartCount = () => {
+      if (localStorage.getItem("token") === "demo-video-token") {
+        setCartCount(0);
+        return;
+      }
+
       getCart().then(res => setCartCount(res.data.totalItems || 0)).catch(() => {});
     };
 
@@ -27,23 +32,23 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <span className={styles.logo} onClick={() => navigate("/dashboard")}>
+        <span id="nav-logo" className={styles.logo} onClick={() => navigate("/dashboard")}>
           Mercato
         </span>
 
         <div className={styles.links}>
-          <button className={`${styles.link} ${isActive("/dashboard") ? styles.active : ""}`}
+          <button id="nav-home" className={`${styles.link} ${isActive("/dashboard") ? styles.active : ""}`}
             onClick={() => navigate("/dashboard")}>Home</button>
-          <button className={`${styles.link} ${isActive("/products") ? styles.active : ""}`}
+          <button id="nav-products" className={`${styles.link} ${isActive("/products") ? styles.active : ""}`}
             onClick={() => navigate("/products")}>Products</button>
-          <button className={`${styles.link} ${isActive("/cart") ? styles.active : ""}`}
+          <button id="nav-cart" className={`${styles.link} ${isActive("/cart") ? styles.active : ""}`}
             onClick={() => navigate("/cart")}>
             Cart
             {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
           </button>
-          <button className={`${styles.link} ${isActive("/orders") ? styles.active : ""}`}
+          <button id="nav-orders" className={`${styles.link} ${isActive("/orders") ? styles.active : ""}`}
             onClick={() => navigate("/orders")}>Orders</button>
-          <button className={`${styles.link} ${isActive("/profile") ? styles.active : ""}`}
+          <button id="nav-profile" className={`${styles.link} ${isActive("/profile") ? styles.active : ""}`}
             onClick={() => navigate("/profile")}>Profile</button>
           {user?.role === "ADMIN" && (
             <button className={`${styles.link} ${styles.adminLink} ${isActive("/admin") ? styles.active : ""}`}
@@ -54,8 +59,8 @@ export default function Navbar() {
         </div>
 
         <div className={styles.right}>
-          <button className={styles.userName} onClick={() => navigate("/profile")}>{user?.name}</button>
-          <button className={styles.logoutBtn} onClick={() => { logout(); navigate("/login"); }}>
+          <button id="nav-user" className={styles.userName} onClick={() => navigate("/profile")}>{user?.name}</button>
+          <button id="logout-button" className={styles.logoutBtn} onClick={() => { logout(); navigate("/login"); }}>
             Logout
           </button>
         </div>

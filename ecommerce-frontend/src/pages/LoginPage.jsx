@@ -28,8 +28,8 @@ export default function LoginPage() {
       const data = err.response?.data;
       if (!err.response) {
         setErrors({ general: "Backend server is not running on port 8081" });
-      } else if (typeof data === "object") {
-        setErrors(data);
+      } else if (data && typeof data === "object") {
+        setErrors(data.error ? { general: data.error } : data);
       } else {
         setErrors({ general: "Invalid email or password" });
       }
@@ -58,22 +58,22 @@ export default function LoginPage() {
           <h2 className={styles.title}>Welcome back</h2>
           <p className={styles.subtitle}>Use your account details to continue.</p>
         </div>
-        {errors.general && <p className={styles.errorBanner}>{errors.general}</p>}
+        {errors.general && <p id="login-error" className={styles.errorBanner}>{errors.general}</p>}
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
-            <label>Email</label>
-            <input name="email" type="email" placeholder="admin@example.com" value={form.email} onChange={handleChange} />
+            <label htmlFor="login-email">Email</label>
+            <input id="login-email" name="email" type="email" placeholder="admin@example.com" value={form.email} onChange={handleChange} required />
             {errors.email && <span className={styles.error}>{errors.email}</span>}
           </div>
           <div className={styles.field}>
-            <label>Password</label>
-            <input name="password" type="password" placeholder="Enter password" value={form.password} onChange={handleChange} />
+            <label htmlFor="login-password">Password</label>
+            <input id="login-password" name="password" type="password" placeholder="Enter password" value={form.password} onChange={handleChange} required />
             {errors.password && <span className={styles.error}>{errors.password}</span>}
           </div>
           <div className={styles.formMeta}>
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
-          <button type="submit" className={styles.btn} disabled={loading}>
+          <button id="login-submit" type="submit" className={styles.btn} disabled={loading}>
             {loading ? "Checking..." : "Continue"}
           </button>
         </form>
