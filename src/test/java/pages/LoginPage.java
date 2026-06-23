@@ -44,6 +44,14 @@ public class LoginPage {
         DemoPause.afterStep();
     }
 
+    public String enteredEmail() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_FIELD_BY_ID)).getAttribute("value");
+    }
+
+    public String enteredPassword() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_FIELD_BY_CSS)).getAttribute("value");
+    }
+
     public void loginAs(String email, String password) {
         enterEmail(email);
         enterPassword(password);

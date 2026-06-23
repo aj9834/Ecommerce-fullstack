@@ -60,28 +60,28 @@ export default function CartPage() {
     navigate("/checkout");
   };
 
-  if (loading) return <div className={styles.center}>Loading cart...</div>;
-  if (error)   return <div className={styles.center}>{error}</div>;
+  if (loading) return <div id="cart-loading" className={styles.center}>Loading cart...</div>;
+  if (error)   return <div id="cart-error" className={styles.center}>{error}</div>;
 
   const isEmpty = !cart?.items?.length;
 
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <h1 className={styles.title}>My Cart</h1>
+        <h1 id="cart-title" className={styles.title}>My Cart</h1>
         {!isEmpty && (
-          <button className={styles.clearBtn} onClick={handleClear}>
+          <button id="cart-clear" className={styles.clearBtn} onClick={handleClear}>
             Clear all
           </button>
         )}
       </div>
 
       {isEmpty ? (
-        <div className={styles.empty}>
+        <div id="cart-empty" className={styles.empty}>
           <div className={styles.emptyIcon}>🛒</div>
           <h2 className={styles.emptyTitle}>Your cart is empty</h2>
           <p className={styles.emptyText}>Add some products to get started</p>
-          <button className={styles.shopBtn} onClick={() => navigate("/products")}>
+          <button id="cart-browse-products" className={styles.shopBtn} onClick={() => navigate("/products")}>
             Browse Products
           </button>
         </div>
@@ -91,15 +91,17 @@ export default function CartPage() {
           {/* Items list */}
           <div className={styles.itemsList}>
             {cart.items.map((item) => (
-              <div key={item.cartItemId} className={styles.item}>
+              <div key={item.cartItemId} data-testid="cart-item" className={styles.item}>
                 <img
                   src={item.imageUrl || "https://placehold.co/100x100"}
                   alt={item.productName}
+                  data-testid="cart-item-image"
                   className={styles.itemImage}
                   onClick={() => navigate(`/products/${item.productId}`)}
                 />
                 <div className={styles.itemDetails}>
                   <h3
+                    data-testid="cart-item-name"
                     className={styles.itemName}
                     onClick={() => navigate(`/products/${item.productId}`)}
                   >
@@ -111,21 +113,24 @@ export default function CartPage() {
                 {/* Quantity control */}
                 <div className={styles.qtyControl}>
                   <button
+                    data-testid="cart-qty-decrease"
                     className={styles.qBtn}
                     onClick={() => handleUpdateQty(item.cartItemId, item.quantity - 1)}
                   >−</button>
-                  <span className={styles.qNum}>{item.quantity}</span>
+                  <span data-testid="cart-item-quantity" className={styles.qNum}>{item.quantity}</span>
                   <button
+                    data-testid="cart-qty-increase"
                     className={styles.qBtn}
                     onClick={() => handleUpdateQty(item.cartItemId, item.quantity + 1)}
                   >+</button>
                 </div>
 
-                <div className={styles.itemTotal}>
+                <div data-testid="cart-item-total" className={styles.itemTotal}>
                   ₹{Number(item.itemTotal).toLocaleString("en-IN")}
                 </div>
 
                 <button
+                  data-testid="cart-item-remove"
                   className={styles.removeBtn}
                   onClick={() => handleRemove(item.cartItemId)}
                   title="Remove item"
@@ -135,13 +140,13 @@ export default function CartPage() {
           </div>
 
           {/* Summary */}
-          <div className={styles.summary}>
+          <div id="cart-summary" className={styles.summary}>
             <h2 className={styles.summaryTitle}>Order Summary</h2>
 
             <div className={styles.summaryRows}>
               <div className={styles.summaryRow}>
-                <span>Items ({cart.totalItems})</span>
-                <span>₹{Number(cart.totalPrice).toLocaleString("en-IN")}</span>
+                <span id="cart-summary-items">Items ({cart.totalItems})</span>
+                <span id="cart-summary-subtotal">₹{Number(cart.totalPrice).toLocaleString("en-IN")}</span>
               </div>
               <div className={styles.summaryRow}>
                 <span>Delivery</span>
@@ -149,7 +154,7 @@ export default function CartPage() {
               </div>
               <div className={styles.summaryRow}>
                 <span>Tax (18% GST)</span>
-                <span>₹{(cart.totalPrice * 0.18).toFixed(2)}</span>
+                <span id="cart-summary-tax">₹{(cart.totalPrice * 0.18).toFixed(2)}</span>
               </div>
             </div>
 
@@ -157,7 +162,7 @@ export default function CartPage() {
 
             <div className={styles.totalRow}>
               <span>Total</span>
-              <span className={styles.totalAmount}>
+              <span id="cart-summary-total" className={styles.totalAmount}>
                 ₹{(cart.totalPrice * 1.18).toLocaleString("en-IN", {
                   maximumFractionDigits: 2
                 })}
@@ -165,6 +170,7 @@ export default function CartPage() {
             </div>
 
             <button
+              id="cart-checkout"
               className={styles.checkoutBtn}
               onClick={handleCheckout}
             >
@@ -172,6 +178,7 @@ export default function CartPage() {
             </button>
 
             <button
+              id="cart-continue-shopping"
               className={styles.continueBtn}
               onClick={() => navigate("/products")}
             >

@@ -95,6 +95,17 @@ public class ProductDetailPage {
         DemoPause.afterStep();
     }
 
+    public void addToCart() {
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_TO_CART)).click();
+        DemoPause.afterStep();
+    }
+
+    public boolean showsAddedToCartState() {
+        boolean added = wait.until(ExpectedConditions.textToBePresentInElementLocated(ADD_TO_CART, "Added to Cart"));
+        DemoPause.afterStep();
+        return added;
+    }
+
     public void backToProducts() {
         wait.until(ExpectedConditions.elementToBeClickable(BACK_BUTTON)).click();
         DemoPause.afterStep();
