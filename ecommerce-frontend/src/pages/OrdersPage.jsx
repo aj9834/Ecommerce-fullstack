@@ -32,20 +32,20 @@ export default function OrdersPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className={styles.center}>Loading orders...</div>;
+  if (loading) return <div id="orders-loading" className={styles.center}>Loading orders...</div>;
 
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <h1>My Orders</h1>
+        <h1 id="orders-title">My Orders</h1>
         <button onClick={() => navigate("/products")}>Shop More</button>
       </div>
 
-      {message && <div className={styles.success}>{message}</div>}
-      {error && <div className={styles.error}>{error}</div>}
+      {message && <div id="orders-success" className={styles.success}>{message}</div>}
+      {error && <div id="orders-error" className={styles.error}>{error}</div>}
 
       {!error && orders.length === 0 && (
-        <div className={styles.empty}>
+        <div id="orders-empty" className={styles.empty}>
           <h2>No orders yet</h2>
           <p>Your completed checkout orders will appear here.</p>
           <button onClick={() => navigate("/products")}>Browse Products</button>
@@ -54,33 +54,33 @@ export default function OrdersPage() {
 
       <div className={styles.list}>
         {orders.map((order) => (
-          <article className={styles.order} key={order.orderId}>
+          <article data-testid="order-card" className={styles.order} key={order.orderId}>
             <div className={styles.orderTop}>
               <div>
-                <span className={styles.label}>Order #{order.orderId}</span>
-                <h2>{formatCurrency(order.totalAmount)}</h2>
+                <span data-testid="order-id" className={styles.label}>Order #{order.orderId}</span>
+                <h2 data-testid="order-total">{formatCurrency(order.totalAmount)}</h2>
                 <p>{formatDate(order.createdAt)}</p>
               </div>
               <div className={styles.badges}>
-                <span>{order.status}</span>
-                <span>{order.paymentMethod} {order.paymentStatus}</span>
+                <span data-testid="order-status">{order.status}</span>
+                <span data-testid="order-payment">{order.paymentMethod} {order.paymentStatus}</span>
               </div>
             </div>
 
-            <div className={styles.address}>
-              <strong>{order.shippingName}</strong>
+            <div data-testid="order-shipping-address" className={styles.address}>
+              <strong data-testid="order-shipping-name">{order.shippingName}</strong>
               <span>
                 {order.shippingAddress}, {order.city}, {order.state} - {order.pincode}
               </span>
-              <span>{order.shippingPhone}</span>
+              <span data-testid="order-shipping-phone">{order.shippingPhone}</span>
             </div>
 
             <div className={styles.items}>
               {order.items.map((item) => (
-                <div className={styles.item} key={item.orderItemId}>
+                <div data-testid="order-item" className={styles.item} key={item.orderItemId}>
                   <img src={item.imageUrl || "https://placehold.co/72x72"} alt={item.productName} />
                   <div>
-                    <strong>{item.productName}</strong>
+                    <strong data-testid="order-item-name">{item.productName}</strong>
                     <span>Qty {item.quantity} x {formatCurrency(item.unitPrice)}</span>
                   </div>
                   <b>{formatCurrency(item.itemTotal)}</b>

@@ -161,6 +161,11 @@ public class CartPage {
         return visible;
     }
 
+    public void proceedToCheckout() {
+        wait.until(ExpectedConditions.elementToBeClickable(CHECKOUT)).click();
+        DemoPause.afterStep();
+    }
+
     private WebElement firstItem() {
         waitForCartToSettle();
         return wait.until(ExpectedConditions.visibilityOfElementLocated(CART_ITEMS));

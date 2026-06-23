@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.DemoPause;
@@ -68,7 +69,7 @@ public class BaseTest {
     protected void requireBackend() {
         if (!isReachable(BACKEND_URL + "/api/auth/login")) {
             DemoPause.afterStep();
-            throw new IllegalStateException("Backend is not running at " + BACKEND_URL);
+            throw new SkipException("Backend is not running at " + BACKEND_URL);
         }
     }
 

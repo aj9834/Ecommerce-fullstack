@@ -101,15 +101,15 @@ export default function CheckoutPage() {
     }
   };
 
-  if (loading) return <div className={styles.center}>Loading checkout...</div>;
+  if (loading) return <div id="checkout-loading" className={styles.center}>Loading checkout...</div>;
 
   if (isEmpty) {
     return (
       <div className={styles.page}>
-        <div className={styles.empty}>
+        <div id="checkout-empty" className={styles.empty}>
           <h1>Your cart is empty</h1>
           <p>Add products before starting checkout.</p>
-          <button onClick={() => navigate("/products")}>Browse Products</button>
+          <button id="checkout-browse-products" onClick={() => navigate("/products")}>Browse Products</button>
         </div>
       </div>
     );
@@ -122,71 +122,73 @@ export default function CheckoutPage() {
         <h1>Checkout</h1>
       </div>
 
-      {error && <div className={styles.error}>{error}</div>}
+      {error && <div id="checkout-error" className={styles.error}>{error}</div>}
 
-      <form className={styles.layout} onSubmit={handleSubmit}>
+      <form id="checkout-form" className={styles.layout} onSubmit={handleSubmit}>
         <section className={styles.panel}>
           <h2>Shipping Details</h2>
           <div className={styles.grid}>
             <label>
               Full name
               <input
+                id="checkout-shipping-name"
                 name="shippingName"
                 value={form.shippingName}
                 onChange={handleChange}
                 placeholder="Your name"
               />
-              {fieldErrors.shippingName && <span>{fieldErrors.shippingName}</span>}
+              {fieldErrors.shippingName && <span data-testid="checkout-shipping-name-error">{fieldErrors.shippingName}</span>}
             </label>
 
             <label>
               Phone
               <input
+                id="checkout-shipping-phone"
                 name="shippingPhone"
                 value={form.shippingPhone}
                 onChange={handleChange}
                 placeholder="10 digit mobile number"
                 inputMode="numeric"
-                maxLength={10}
               />
-              {fieldErrors.shippingPhone && <span>{fieldErrors.shippingPhone}</span>}
+              {fieldErrors.shippingPhone && <span data-testid="checkout-shipping-phone-error">{fieldErrors.shippingPhone}</span>}
             </label>
 
             <label className={styles.full}>
               Address
               <textarea
+                id="checkout-shipping-address"
                 name="shippingAddress"
                 value={form.shippingAddress}
                 onChange={handleChange}
                 placeholder="House number, street, area"
                 rows={4}
               />
-              {fieldErrors.shippingAddress && <span>{fieldErrors.shippingAddress}</span>}
+              {fieldErrors.shippingAddress && <span data-testid="checkout-shipping-address-error">{fieldErrors.shippingAddress}</span>}
             </label>
 
             <label>
               City
-              <input name="city" value={form.city} onChange={handleChange} placeholder="City" />
-              {fieldErrors.city && <span>{fieldErrors.city}</span>}
+              <input id="checkout-city" name="city" value={form.city} onChange={handleChange} placeholder="City" />
+              {fieldErrors.city && <span data-testid="checkout-city-error">{fieldErrors.city}</span>}
             </label>
 
             <label>
               State
-              <input name="state" value={form.state} onChange={handleChange} placeholder="State" />
-              {fieldErrors.state && <span>{fieldErrors.state}</span>}
+              <input id="checkout-state" name="state" value={form.state} onChange={handleChange} placeholder="State" />
+              {fieldErrors.state && <span data-testid="checkout-state-error">{fieldErrors.state}</span>}
             </label>
 
             <label>
               Pincode
               <input
+                id="checkout-pincode"
                 name="pincode"
                 value={form.pincode}
                 onChange={handleChange}
                 placeholder="6 digit pincode"
                 inputMode="numeric"
-                maxLength={6}
               />
-              {fieldErrors.pincode && <span>{fieldErrors.pincode}</span>}
+              {fieldErrors.pincode && <span data-testid="checkout-pincode-error">{fieldErrors.pincode}</span>}
             </label>
           </div>
 
@@ -194,6 +196,7 @@ export default function CheckoutPage() {
             <h2>Payment</h2>
             <label className={styles.paymentOption}>
               <input
+                id="checkout-payment-cod"
                 type="radio"
                 name="paymentMethod"
                 value="COD"
@@ -234,7 +237,7 @@ export default function CheckoutPage() {
             <strong>{formatCurrency(totals.totalAmount)}</strong>
           </div>
 
-          <button className={styles.placeBtn} type="submit" disabled={placing}>
+          <button id="checkout-place-order" className={styles.placeBtn} type="submit" disabled={placing}>
             {placing ? "Placing Order..." : "Place Order"}
           </button>
         </aside>
