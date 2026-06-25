@@ -1,19 +1,40 @@
+@import "tailwindcss";
+
 :root {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  color: #142320;
-  background: #f4f7f2;
+  font-family: "Inter", "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  color: #17251f;
+  background: #f6f7f3;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --ink: #142320;
-  --muted: #63716d;
-  --line: #dce6e2;
+  --ink: #17251f;
+  --muted: #68756f;
+  --line: #dfe7e2;
   --paper: #ffffff;
-  --wash: #f4f7f2;
-  --teal: #0f766e;
-  --teal-dark: #115e59;
-  --coral: #ff6b4a;
-  --sun: #ffcf66;
+  --wash: #f6f7f3;
+  --teal: #14532d;
+  --teal-dark: #0f3d23;
+  --coral: #f97316;
+  --sun: #fbbf24;
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-strong: rgba(255, 255, 255, 0.78);
+  --glass-line: rgba(255, 255, 255, 0.72);
+  --shadow-sm: 0 1px 2px rgba(16, 45, 29, 0.04), 0 12px 32px rgba(16, 45, 29, 0.07);
+  --shadow-md: 0 24px 64px rgba(16, 45, 29, 0.13);
+  color-scheme: light;
+  transition: background-color 0.35s, color 0.35s;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f0fdf4;
+  --muted: #9fb0a7;
+  --line: #35453e;
+  --paper: #17231e;
+  --wash: #0c1511;
+  --glass: rgba(18, 29, 25, 0.72);
+  --glass-strong: rgba(24, 40, 33, 0.86);
+  --glass-line: rgba(255, 255, 255, 0.1);
 }
 
 *, *::before, *::after {
@@ -24,8 +45,15 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--wash);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(187, 247, 208, 0.72), transparent 31rem),
+    radial-gradient(circle at 90% 18%, rgba(219, 234, 254, 0.72), transparent 34rem),
+    radial-gradient(circle at 58% 88%, rgba(255, 237, 213, 0.62), transparent 32rem),
+    #f3f6f4;
+  background-attachment: fixed;
   color: var(--ink);
+  line-height: 1.5;
+  transition: background 0.35s ease, color 0.35s ease;
 }
 
 #root {
@@ -48,4 +76,100 @@ textarea {
 
 button {
   letter-spacing: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 100% 4px;
+  opacity: 0.18;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(22, 101, 52, 0.24);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #bbf7d0;
+  color: #14532d;
+}
+
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(22, 101, 52, 0.2), transparent 31rem),
+    radial-gradient(circle at 90% 18%, rgba(30, 64, 175, 0.16), transparent 34rem),
+    radial-gradient(circle at 58% 88%, rgba(154, 52, 18, 0.12), transparent 32rem),
+    #09110e;
+  color: var(--ink);
+}
+
+html[data-theme="dark"] body::before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  opacity: 0.5;
+}
+
+html[data-theme="dark"] ::selection {
+  background: #166534;
+  color: #ecfdf5;
+}
+
+html[data-theme="dark"] :is(input, select, textarea) {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] :is([class*="_card_"], [class*="_panel_"], [class*="_form_"], [class*="_section_"]) {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[id$="-loading"] {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+[id$="-loading"]::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  border: 3px solid #d8e4dc;
+  border-top-color: #166534;
+  border-radius: 50%;
+  animation: premium-spin 0.75s linear infinite;
+}
+
+@keyframes premium-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

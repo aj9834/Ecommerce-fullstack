@@ -1,8 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCart } from "../api/cartApi";
-import { checkout } from "../api/OrderApi";
+import {
+  checkout,
+  createRazorpayOrder,
+  verifyRazorpayPayment,
+} from "../api/OrderApi";
 import styles from "../styles/checkout.module.css";
+
+const RAZORPAY_SCRIPT_URL = "https://checkout.razorpay.com/v1/checkout.js";
 
 const initialForm = {
   shippingName: "",
@@ -16,6 +22,32 @@ const initialForm = {
 
 const formatCurrency = (value) =>
   `Rs. ${Number(value || 0).toLocaleString("en-IN", { maximumFractionDigits: 2 })}`;
+
+const loadRazorpayScript = () =>
+  new Promise((resolve, reject) => {
+    if (window.Razorpay) {
+      resolve();
+      return;
+    }
+
+    const existingScript = document.querySelector(`script[src="${RAZORPAY_SCRIPT_URL}"]`);
+    if (existingScript) {
+      existingScript.addEventListener("load", resolve, { once: true });
+      existingScript.addEventListener(
+        "error",
+        () => reject(new Error("Razorpay checkout failed to load")),
+        { once: true }
+      );
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = RAZORPAY_SCRIPT_URL;
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error("Razorpay checkout failed to load"));
+    document.body.appendChild(script);
+  });
 
 export default function CheckoutPage() {
   const [cart, setCart] = useState(null);
@@ -85,11 +117,67 @@ export default function CheckoutPage() {
       const payload = Object.fromEntries(
         Object.entries(form).map(([key, value]) => [key, value.trim()])
       );
-      const res = await checkout(payload);
-      window.dispatchEvent(new Event("cart:updated"));
-      navigate("/orders", {
-        state: { message: `Order #${res.data.orderId} placed successfully.` },
+
+      if (form.paymentMethod === "COD") {
+        const res = await checkout(payload);
+        window.dispatchEvent(new Event("cart:updated"));
+        navigate(`/checkout/success?orderId=${res.data.orderId}&method=COD`);
+        return;
+      }
+
+      await loadRazorpayScript();
+      const { data: paymentOrder } = await createRazorpayOrder(payload);
+
+      const razorpay = new window.Razorpay({
+        key: paymentOrder.keyId,
+        amount: paymentOrder.amount,
+        currency: paymentOrder.currency,
+        name: "Ecommerce Store",
+        description: `Payment for order #${paymentOrder.localOrderId}`,
+        order_id: paymentOrder.razorpayOrderId,
+        prefill: {
+          name: paymentOrder.customerName,
+          email: paymentOrder.customerEmail,
+          contact: paymentOrder.customerPhone,
+        },
+        theme: { color: "#166534" },
+        modal: {
+          confirm_close: true,
+          ondismiss: () => {
+            setError("Payment was cancelled. Your order is still pending payment.");
+            setPlacing(false);
+          },
+        },
+        handler: async (response) => {
+          try {
+            const verification = await verifyRazorpayPayment({
+              razorpayOrderId: response.razorpay_order_id,
+              razorpayPaymentId: response.razorpay_payment_id,
+              razorpaySignature: response.razorpay_signature,
+            });
+            window.dispatchEvent(new Event("cart:updated"));
+            navigate(
+              `/checkout/success?orderId=${verification.data.orderId}&method=ONLINE`
+            );
+          } catch (verificationError) {
+            setError(
+              verificationError.response?.data?.error ||
+                "Payment completed, but verification failed. Please contact support."
+            );
+            setPlacing(false);
+          }
+        },
       });
+
+      razorpay.on("payment.failed", (response) => {
+        setError(
+          response.error?.description ||
+            "Online payment failed. You can retry from your pending order."
+        );
+        setPlacing(false);
+      });
+
+      razorpay.open();
     } catch (err) {
       const data = err.response?.data;
       if (data && !data.error) {
@@ -204,8 +292,22 @@ export default function CheckoutPage() {
                 onChange={handleChange}
               />
               <span>
-                <strong>Cash on Delivery</strong>
+                <strong>Cash on Delivery (COD)</strong>
                 Pay when your order arrives.
+              </span>
+            </label>
+            <label className={styles.paymentOption}>
+              <input
+                id="checkout-payment-online"
+                type="radio"
+                name="paymentMethod"
+                value="ONLINE"
+                checked={form.paymentMethod === "ONLINE"}
+                onChange={handleChange}
+              />
+              <span>
+                <strong>Online Payment</strong>
+                Pay securely with Razorpay.
               </span>
             </label>
           </div>
@@ -238,7 +340,13 @@ export default function CheckoutPage() {
           </div>
 
           <button id="checkout-place-order" className={styles.placeBtn} type="submit" disabled={placing}>
-            {placing ? "Placing Order..." : "Place Order"}
+            {placing
+              ? form.paymentMethod === "ONLINE"
+                ? "Opening Payment..."
+                : "Placing Order..."
+              : form.paymentMethod === "ONLINE"
+                ? "Pay Online"
+                : "Place COD Order"}
           </button>
         </aside>
       </form>

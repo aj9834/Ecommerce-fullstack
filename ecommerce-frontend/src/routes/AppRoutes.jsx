@@ -8,8 +8,10 @@ import ProductsPage from "../pages/ProductsPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import CartPage from "../pages/CartPage";
 import CheckoutPage from "../pages/CheckoutPage";
+import CheckoutSuccessPage from "../pages/CheckoutSuccessPage";
 import OrdersPage from "../pages/OrdersPage";
 import ProfilePage from "../pages/ProfilePage";
+import WishlistPage from "../pages/WishlistPage";
 import AdminPage from "../pages/admin/AdminPage";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AdminRoute from "../components/AdminRoute";
@@ -39,8 +41,14 @@ export default function AppRoutes() {
       <Route path="/checkout" element={
         <ProtectedRoute><Layout><CheckoutPage /></Layout></ProtectedRoute>
       }/>
+      <Route path="/checkout/success" element={
+        <ProtectedRoute><Layout><CheckoutSuccessPage /></Layout></ProtectedRoute>
+      }/>
       <Route path="/orders" element={
         <ProtectedRoute><Layout><OrdersPage /></Layout></ProtectedRoute>
+      }/>
+      <Route path="/wishlist" element={
+        <ProtectedRoute><Layout><WishlistPage /></Layout></ProtectedRoute>
       }/>
       <Route path="/profile" element={
         <ProtectedRoute><Layout><ProfilePage /></Layout></ProtectedRoute>

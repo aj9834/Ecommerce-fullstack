@@ -299,3 +299,98 @@
     justify-self: start;
   }
 }
+
+/* Premium visual layer */
+.page {
+  padding-top: 50px;
+  padding-bottom: 76px;
+}
+
+.title {
+  color: #17251f;
+  font-size: 40px;
+  letter-spacing: -0.03em;
+}
+
+.clearBtn,
+.shopBtn,
+.checkoutBtn,
+.continueBtn {
+  border-radius: 11px;
+}
+
+.empty {
+  padding: 96px 24px;
+  border: 1px solid #e0e7e2;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 16px 50px rgba(16, 45, 29, 0.07);
+}
+
+.item {
+  padding: 18px;
+  border-color: #e1e8e3;
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(16, 45, 29, 0.045);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.item:hover {
+  border-color: #b7cfbf;
+  box-shadow: 0 16px 38px rgba(16, 45, 29, 0.09);
+  transform: translateY(-2px);
+}
+
+.itemImage,
+.qtyControl,
+.removeBtn {
+  border-radius: 11px;
+}
+
+.itemName:hover,
+.itemTotal {
+  color: #166534;
+}
+
+.summary {
+  top: 96px;
+  padding: 30px 26px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #14532d, #0f3d23);
+  box-shadow: 0 24px 54px rgba(15, 61, 35, 0.2);
+}
+
+.totalAmount {
+  color: #fde68a;
+}
+
+.shopBtn,
+.checkoutBtn {
+  background: #f97316;
+}
+
+.shopBtn:hover,
+.checkoutBtn:hover:not(:disabled) {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism surface layer */
+.empty,
+.item {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 18px 48px rgba(16, 45, 29, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.summary {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(20, 83, 45, 0.82), rgba(15, 61, 35, 0.74));
+  backdrop-filter: blur(28px) saturate(150%);
+  box-shadow: 0 28px 68px rgba(15, 61, 35, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}

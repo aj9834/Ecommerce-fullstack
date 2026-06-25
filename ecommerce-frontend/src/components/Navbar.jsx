@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState, useEffect } from "react";
 import { getCart } from "../api/cartApi";
+import useFavorites from "../hooks/useFavorites";
 import styles from "../styles/navbar.module.css";
 
 export default function Navbar() {
@@ -9,6 +10,10 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [cartCount, setCartCount] = useState(0);
+  const { totalItems: wishlistCount } = useFavorites();
+  const [theme, setTheme] = useState(
+    () => document.documentElement.dataset.theme || localStorage.getItem("mercato-theme") || "light"
+  );
 
   useEffect(() => {
     const refreshCartCount = () => {
@@ -29,6 +34,13 @@ export default function Navbar() {
 
   const isActive = (path) => location.pathname.startsWith(path);
 
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem("mercato-theme", nextTheme);
+    setTheme(nextTheme);
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
@@ -46,6 +58,11 @@ export default function Navbar() {
             Cart
             {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
           </button>
+          <button id="nav-wishlist" className={`${styles.link} ${isActive("/wishlist") ? styles.active : ""}`}
+            onClick={() => navigate("/wishlist")}>
+            Wishlist
+            {wishlistCount > 0 && <span className={styles.wishlistBadge}>{wishlistCount}</span>}
+          </button>
           <button id="nav-orders" className={`${styles.link} ${isActive("/orders") ? styles.active : ""}`}
             onClick={() => navigate("/orders")}>Orders</button>
           <button id="nav-profile" className={`${styles.link} ${isActive("/profile") ? styles.active : ""}`}
@@ -60,6 +77,16 @@ export default function Navbar() {
 
         <div className={styles.right}>
           <button id="nav-user" className={styles.userName} onClick={() => navigate("/profile")}>{user?.name}</button>
+          <button
+            id="theme-toggle"
+            type="button"
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            <span aria-hidden="true">{theme === "dark" ? "\u2600" : "\u263E"}</span>
+          </button>
           <button id="logout-button" className={styles.logoutBtn} onClick={() => { logout(); navigate("/login"); }}>
             Logout
           </button>

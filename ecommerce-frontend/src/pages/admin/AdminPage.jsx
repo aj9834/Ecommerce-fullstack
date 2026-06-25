@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Routes, Route, Navigate, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import AdminProducts from "./AdminProducts";
@@ -9,8 +10,20 @@ export default function AdminPage() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [theme, setTheme] = useState(
+    () => document.documentElement.dataset.theme || localStorage.getItem("mercato-theme") || "light"
+  );
 
   const isActive = (path) => location.pathname === path;
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("mercato-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark");
+  };
 
   return (
     <div className={styles.shell}>
@@ -53,6 +66,18 @@ export default function AdminPage() {
             <div className={styles.adminName}>{user?.name}</div>
             <div className={styles.adminEmail}>{user?.email}</div>
           </div>
+          <button
+            type="button"
+            className={styles.themeSide}
+            onClick={toggleTheme}
+            aria-pressed={theme === "dark"}
+            aria-label={`Switch admin panel to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            <span className={styles.themeText}>Dark mode</span>
+            <span className={styles.themeSwitch} aria-hidden="true">
+              <span className={styles.themeKnob} />
+            </span>
+          </button>
           <button className={styles.backBtn} onClick={() => navigate("/dashboard")}>
             ← Back to Store
           </button>

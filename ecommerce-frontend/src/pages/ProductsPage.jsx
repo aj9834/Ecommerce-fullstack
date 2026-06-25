@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { addToCart } from "../api/cartApi";
 import { getAllProducts, searchProducts } from "../api/productApi";
 import { useNavigate } from "react-router-dom";
+import useFavorites from "../hooks/useFavorites";
 import styles from "../styles/products.module.css";
 
 export default function ProductsPage() {
@@ -12,6 +13,11 @@ export default function ProductsPage() {
   const [category, setCategory] = useState("");
   const [addingProductId, setAddingProductId] = useState(null);
   const [addedProductId, setAddedProductId] = useState(null);
+  const {
+    isFavorite,
+    toggleFavorite,
+    error: wishlistError,
+  } = useFavorites();
   const navigate = useNavigate();
 
   async function fetchProducts() {
@@ -99,12 +105,23 @@ export default function ProductsPage() {
   // Get unique categories from loaded products for the dropdown
   const categories = [...new Set(products.map((p) => p.category))];
 
+  const handleFavorite = (e, productId) => {
+    e.stopPropagation();
+    toggleFavorite(productId);
+  };
+
   return (
     <div className={styles.page}>
 
       {/* Header */}
       <div className={styles.header}>
-        <h1 id="products-title" className={styles.title}>Products</h1>
+        <div>
+          <span className={styles.eyebrow}>Curated for you</span>
+          <h1 id="products-title" className={styles.title}>Discover something good.</h1>
+        </div>
+        {!loading && !error && (
+          <span className={styles.resultCount}>{products.length} products</span>
+        )}
       </div>
 
       {/* Search + Filter Bar */}
@@ -135,6 +152,7 @@ export default function ProductsPage() {
       {/* States */}
       {loading && <p id="products-loading" className={styles.message}>Loading products...</p>}
       {error && <p id="products-error" className={styles.error}>{error}</p>}
+      {wishlistError && <p className={styles.error}>{wishlistError}</p>}
       {!loading && !error && products.length === 0 && (
         <p id="products-empty" className={styles.message}>No products found.</p>
       )}
@@ -142,26 +160,38 @@ export default function ProductsPage() {
       {/* Product Grid */}
       {!loading && !error && (
         <div id="product-grid" className={styles.grid}>
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div
               key={product.productId}
               data-testid="product-card"
               data-product-id={product.productId}
               className={styles.card}
               onClick={() => navigate(`/products/${product.productId}`)}
+              style={{ "--card-index": index }}
             >
-              <img
-                src={product.imageUrl || "https://placehold.co/300x200"}
-                alt={product.name}
-                className={styles.image}
-              />
+              <div className={styles.imageWrap}>
+                <img
+                  src={product.imageUrl || "https://placehold.co/300x200"}
+                  alt={product.name}
+                  className={styles.image}
+                />
+                <button
+                  type="button"
+                  className={`${styles.likeBtn} ${isFavorite(product.productId) ? styles.liked : ""}`}
+                  onClick={(e) => handleFavorite(e, product.productId)}
+                  aria-label={`${isFavorite(product.productId) ? "Unlike" : "Like"} ${product.name}`}
+                  aria-pressed={isFavorite(product.productId)}
+                  title={`${isFavorite(product.productId) ? "Unlike" : "Like"} ${product.name}`}
+                >
+                  <span aria-hidden="true">{isFavorite(product.productId) ? "\u2665" : "\u2661"}</span>
+                </button>
+                {product.stock > 0 && product.stock <= 10 && (
+                  <span className={styles.lowStock}>Only {product.stock} left</span>
+                )}
+              </div>
               <div className={styles.cardBody}>
                 <span data-testid="product-category" className={styles.category}>{product.category}</span>
                 <h3 data-testid="product-name" className={styles.productName}>{product.name}</h3>
-                <p className={styles.description}>
-                  {product.description?.slice(0, 80)}
-                  {product.description?.length > 80 ? "..." : ""}
-                </p>
                 <div className={styles.cardFooter}>
                   <span data-testid="product-price" className={styles.price}>₹{product.price}</span>
                   <span data-testid="product-stock" className={styles.stock}>
@@ -180,7 +210,7 @@ export default function ProductsPage() {
                   }
                 >
                   {addedProductId === product.productId
-                    ? "Added"
+                    ? "Added \u2713"
                     : addingProductId === product.productId
                       ? "Adding..."
                       : "Add to Cart"}

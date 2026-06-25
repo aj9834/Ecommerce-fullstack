@@ -268,6 +268,21 @@
   transform: translateY(-1px);
 }
 
+/* Glassmorphism surface layer */
+.summary,
+.panel {
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 20px 54px rgba(16, 45, 29, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(26px) saturate(145%);
+}
+
+.metaList div,
+.field input {
+  background: rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(12px);
+}
+
 .primary:disabled {
   border-color: #9aa8a5;
   background: #9aa8a5;
@@ -337,4 +352,85 @@
   .secondary {
     width: 100%;
   }
+}
+
+/* Premium visual layer */
+.page {
+  padding-top: 50px;
+  padding-bottom: 72px;
+}
+
+.eyebrow,
+.role {
+  color: #166534;
+}
+
+.role {
+  border-color: #bbd7c4;
+  background: #f0fdf4;
+}
+
+.header h1 {
+  color: #17251f;
+  font-size: 40px;
+  letter-spacing: -0.03em;
+}
+
+.grid {
+  gap: 26px;
+}
+
+.summary,
+.panel {
+  border-color: #e0e7e2;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(16, 45, 29, 0.06);
+}
+
+.avatar {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #14532d, #0f3d23);
+  color: #fde68a;
+  box-shadow: 0 12px 28px rgba(15, 61, 35, 0.2);
+}
+
+.metaList div {
+  border-color: #e2e9e4;
+  border-radius: 12px;
+  background: #f8faf8;
+}
+
+.field input {
+  border-color: #d7e0da;
+  border-radius: 11px;
+  background: #f9faf8;
+}
+
+.field input:hover {
+  background: #ffffff;
+  border-color: #b9c9bf;
+}
+
+.field input:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 4px rgba(22, 101, 52, 0.12);
+}
+
+.eyeButton,
+.primary,
+.secondary,
+.success,
+.errorBanner {
+  border-radius: 11px;
+}
+
+.primary {
+  border-color: #f97316;
+  background: #f97316;
+  box-shadow: 0 10px 24px rgba(249, 115, 22, 0.2);
+}
+
+.primary:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
 }

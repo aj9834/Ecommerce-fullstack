@@ -47,6 +47,12 @@ public class Order {
 	@Column(nullable = false)
 	private String paymentStatus;
 
+	@Column(unique = true)
+	private String razorpayOrderId;
+
+	@Column(unique = true)
+	private String razorpayPaymentId;
+
 	@Column(nullable = false)
 	private BigDecimal subtotal;
 
@@ -173,6 +179,22 @@ public class Order {
 
 	public void setPaymentStatus(String paymentStatus) {
 		this.paymentStatus = paymentStatus;
+	}
+
+	public String getRazorpayOrderId() {
+		return razorpayOrderId;
+	}
+
+	public void setRazorpayOrderId(String razorpayOrderId) {
+		this.razorpayOrderId = razorpayOrderId;
+	}
+
+	public String getRazorpayPaymentId() {
+		return razorpayPaymentId;
+	}
+
+	public void setRazorpayPaymentId(String razorpayPaymentId) {
+		this.razorpayPaymentId = razorpayPaymentId;
 	}
 
 	public BigDecimal getSubtotal() {

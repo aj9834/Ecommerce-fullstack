@@ -8,5 +8,7 @@ import java.util.List;
 public interface OrderService {
 	OrderResponse checkout(String userEmail, CheckoutRequest request);
 
+	OrderResponse createOnlineOrder(String userEmail, CheckoutRequest request);
+
 	List<OrderResponse> getUserOrders(String userEmail);
 }

@@ -105,9 +105,15 @@
 }
 
 .payment {
+  display: grid;
+  gap: 12px;
   border-top: 1px solid #dce6e2;
   margin-top: 28px;
   padding-top: 24px;
+}
+
+.payment h2 {
+  margin-bottom: 8px;
 }
 
 .paymentOption {
@@ -266,6 +272,29 @@
   font-size: 14px;
 }
 
+/* Glassmorphism surface layer */
+.panel,
+.empty {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 20px 54px rgba(16, 45, 29, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(26px) saturate(145%);
+}
+
+.grid input,
+.grid textarea,
+.paymentOption {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(12px);
+}
+
+.summary {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(20, 83, 45, 0.82), rgba(15, 61, 35, 0.74));
+  backdrop-filter: blur(28px) saturate(150%);
+  box-shadow: 0 28px 68px rgba(15, 61, 35, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
 .error {
   color: #9a3412;
   background: #fff2ee;
@@ -331,4 +360,149 @@
   .summary {
     padding: 20px;
   }
+}
+
+/* Premium visual layer */
+.page {
+  padding-top: 50px;
+  padding-bottom: 76px;
+}
+
+.header h1 {
+  color: #17251f;
+  font-size: 40px;
+  letter-spacing: -0.03em;
+}
+
+.backBtn,
+.empty button,
+.placeBtn,
+.header button {
+  border-radius: 11px;
+}
+
+.panel {
+  padding: 30px;
+  border-color: #e0e7e2;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(16, 45, 29, 0.06);
+}
+
+.grid input,
+.grid textarea {
+  min-height: 50px;
+  border-color: #d7e0da;
+  border-radius: 11px;
+  background: #f9faf8;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.grid input:hover,
+.grid textarea:hover {
+  background: #ffffff;
+  border-color: #b9c9bf;
+}
+
+.grid input:focus,
+.grid textarea:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 4px rgba(22, 101, 52, 0.12);
+}
+
+.paymentOption {
+  border-color: #bbd7c4;
+  border-radius: 14px;
+  background: #f0fdf4;
+}
+
+.summary {
+  top: 96px;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #14532d, #0f3d23);
+  box-shadow: 0 24px 54px rgba(15, 61, 35, 0.2);
+}
+
+.item img {
+  border-radius: 10px;
+}
+
+.item b,
+.total strong {
+  color: #fde68a;
+}
+
+.placeBtn,
+.empty button {
+  background: #f97316;
+  box-shadow: 0 12px 26px rgba(249, 115, 22, 0.24);
+}
+
+.placeBtn:hover:not(:disabled),
+.empty button:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+.error,
+.success,
+.empty {
+  border-radius: 14px;
+}
+
+.successCard {
+  max-width: 620px;
+  margin: 60px auto;
+  padding: 52px 32px;
+  border: 1px solid #dce6e2;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 54px rgba(16, 45, 29, 0.1);
+  text-align: center;
+}
+
+.successIcon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.successCard h1 {
+  margin: 0 0 12px;
+  color: #17251f;
+}
+
+.successCard p {
+  margin: 0;
+  color: #63716d;
+}
+
+.successActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.successActions button {
+  border: none;
+  border-radius: 11px;
+  background: #166534;
+  color: #ffffff;
+  padding: 13px 18px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.successActions .secondaryButton {
+  border: 1px solid #cad8d4;
+  background: #ffffff;
+  color: #166534;
 }

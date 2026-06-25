@@ -29,6 +29,7 @@ public class OrderServiceImpl implements OrderService {
 	private static final BigDecimal TAX_RATE = new BigDecimal("0.18");
 	private static final BigDecimal DELIVERY_FEE = BigDecimal.ZERO.setScale(2);
 	private static final String PAYMENT_METHOD_COD = "COD";
+	private static final String PAYMENT_METHOD_ONLINE = "ONLINE";
 
 	@Autowired
 	private UserRepository userRepository;
@@ -46,9 +47,23 @@ public class OrderServiceImpl implements OrderService {
 	@Transactional
 	public OrderResponse checkout(String userEmail, CheckoutRequest request) {
 		if (!PAYMENT_METHOD_COD.equalsIgnoreCase(request.getPaymentMethod())) {
-			throw new RuntimeException("Only Cash on Delivery is supported");
+			throw new RuntimeException("Use the online payment endpoint for Razorpay payments");
 		}
 
+		return createOrder(userEmail, request, PAYMENT_METHOD_COD, "PENDING_COD");
+	}
+
+	@Override
+	@Transactional
+	public OrderResponse createOnlineOrder(String userEmail, CheckoutRequest request) {
+		if (!PAYMENT_METHOD_ONLINE.equalsIgnoreCase(request.getPaymentMethod())) {
+			throw new RuntimeException("Payment method must be ONLINE");
+		}
+
+		return createOrder(userEmail, request, PAYMENT_METHOD_ONLINE, "PAYMENT_PENDING");
+	}
+
+	private OrderResponse createOrder(String userEmail, CheckoutRequest request, String paymentMethod, String status) {
 		User user = findUser(userEmail);
 		Cart cart = cartRepository.findByUser(user).orElseThrow(() -> new RuntimeException("Cart is empty"));
 
@@ -65,8 +80,8 @@ public class OrderServiceImpl implements OrderService {
 		order.setCity(request.getCity().trim());
 		order.setState(request.getState().trim());
 		order.setPincode(request.getPincode().trim());
-		order.setPaymentMethod(PAYMENT_METHOD_COD);
-		order.setStatus("PLACED");
+		order.setPaymentMethod(paymentMethod);
+		order.setStatus(status);
 		order.setPaymentStatus("PENDING");
 		order.setDeliveryFee(DELIVERY_FEE);
 

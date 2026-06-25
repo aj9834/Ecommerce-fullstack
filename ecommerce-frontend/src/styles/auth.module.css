@@ -256,3 +256,118 @@
     padding: 36px 24px 48px;
   }
 }
+
+/* Glassmorphism surface layer */
+.brandPanel {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.16);
+}
+
+.formPanel {
+  border-color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 32px 90px rgba(16, 45, 29, 0.16), inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(30px) saturate(150%);
+}
+
+.field input {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(12px);
+}
+
+/* Premium visual layer */
+.authPage {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(187, 247, 208, 0.5), transparent 30%),
+    #f7f8f5;
+}
+
+.brandPanel {
+  padding: 56px;
+  background:
+    linear-gradient(145deg, rgba(15, 61, 35, 0.88), rgba(8, 42, 25, 0.97)),
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80");
+}
+
+.brandMark {
+  padding: 10px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+}
+
+.brandTitle {
+  font-size: clamp(38px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.brandStats div {
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+}
+
+.formPanel {
+  width: min(calc(100% - 48px), 560px);
+  min-height: auto;
+  margin: auto;
+  padding: 48px;
+  border: 1px solid rgba(224, 231, 226, 0.9);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 28px 70px rgba(16, 45, 29, 0.11);
+}
+
+.title {
+  letter-spacing: -0.03em;
+}
+
+.field input {
+  min-height: 52px;
+  border-color: #d7e0da;
+  border-radius: 11px;
+  background: #f9faf8;
+}
+
+.field input:hover {
+  background: #ffffff;
+  border-color: #b9c9bf;
+}
+
+.field input:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 4px rgba(22, 101, 52, 0.12);
+}
+
+.btn {
+  background: #f97316;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.24);
+}
+
+.btn:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+.formMeta a,
+.switchLink a {
+  color: #166534;
+}
+
+.errorBanner,
+.successBanner {
+  border-radius: 12px;
+}
+
+@media (max-width: 860px) {
+  .brandPanel {
+    padding: 32px 24px;
+  }
+
+  .formPanel {
+    width: calc(100% - 32px);
+    margin: 24px auto 40px;
+    padding: 32px 24px;
+    border-radius: 18px;
+  }
+}

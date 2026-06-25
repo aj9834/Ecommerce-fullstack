@@ -244,3 +244,84 @@
     text-align: left;
   }
 }
+
+/* Premium visual layer */
+.page {
+  padding-top: 50px;
+  padding-bottom: 76px;
+}
+
+.header h1 {
+  color: #17251f;
+  font-size: 40px;
+  letter-spacing: -0.03em;
+}
+
+.header button,
+.empty button {
+  background: #f97316;
+  border-radius: 11px;
+  box-shadow: 0 10px 24px rgba(249, 115, 22, 0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.header button:hover,
+.empty button:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+.success,
+.error {
+  border-radius: 13px;
+}
+
+.order,
+.empty {
+  border-color: #e0e7e2;
+  border-radius: 18px;
+  box-shadow: 0 10px 34px rgba(16, 45, 29, 0.06);
+}
+
+.order {
+  padding: 26px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.order:hover {
+  transform: translateY(-3px);
+  border-color: #b7cfbf;
+  box-shadow: 0 20px 46px rgba(16, 45, 29, 0.1);
+}
+
+.label,
+.item b {
+  color: #166534;
+}
+
+.badges span {
+  border-color: #bbd7c4;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.item img {
+  border-radius: 11px;
+}
+
+/* Glassmorphism surface layer */
+.order,
+.empty {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 20px 54px rgba(16, 45, 29, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(26px) saturate(145%);
+}
+
+.order:hover {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.badges span {
+  backdrop-filter: blur(12px);
+}

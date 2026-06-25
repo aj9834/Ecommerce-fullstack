@@ -18,6 +18,7 @@ export default function AdminProducts() {
   const [form, setForm] = useState(EMPTY_FORM);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const load = useCallback(async () => {
     try {
@@ -46,14 +47,18 @@ export default function AdminProducts() {
 
   const handleSave = async () => {
     setSaving(true);
+    setSuccess("");
     try {
       if (editingId) {
         await adminUpdateProduct(editingId, form);
+        setSuccess(`"${form.name}" was updated successfully.`);
       } else {
         await adminCreateProduct(form);
+        setSuccess(`"${form.name}" was added with its description.`);
       }
       setShowForm(false);
-      load();
+      await load();
+      setTimeout(() => setSuccess(""), 3500);
     } catch (err) {
       alert(err.response?.data?.error || "Save failed");
     } finally { setSaving(false); }
@@ -85,6 +90,7 @@ export default function AdminProducts() {
       </div>
 
       {error && <p className={styles.errorMsg}>{error}</p>}
+      {success && <div className={styles.successToast}>{success}</div>}
       {loading ? <p className={styles.loadMsg}>Loading...</p> : (
         <div className={styles.table}>
           <div className={styles.tableHead}>
@@ -106,7 +112,7 @@ export default function AdminProducts() {
                 <div>
                   <div className={styles.productName}>{p.name}</div>
                   <div className={styles.productDesc}>
-                    {p.description?.slice(0, 50)}{p.description?.length > 50 ? "..." : ""}
+                    {p.description || "No description added yet."}
                   </div>
                 </div>
               </div>
