@@ -8,6 +8,7 @@ import com.ecommerce.entity.WishlistItem;
 import com.ecommerce.repository.ProductRepository;
 import com.ecommerce.repository.UserRepository;
 import com.ecommerce.repository.WishlistItemRepository;
+import com.ecommerce.repository.ReviewRepository;
 import com.ecommerce.service.WishlistService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,15 +20,18 @@ public class WishlistServiceImpl implements WishlistService {
 	private final WishlistItemRepository wishlistItemRepository;
 	private final UserRepository userRepository;
 	private final ProductRepository productRepository;
+	private final ReviewRepository reviewRepository;
 
 	public WishlistServiceImpl(
 			WishlistItemRepository wishlistItemRepository,
 			UserRepository userRepository,
-			ProductRepository productRepository
+			ProductRepository productRepository,
+			ReviewRepository reviewRepository
 	) {
 		this.wishlistItemRepository = wishlistItemRepository;
 		this.userRepository = userRepository;
 		this.productRepository = productRepository;
+		this.reviewRepository = reviewRepository;
 	}
 
 	@Override
@@ -96,6 +100,9 @@ public class WishlistServiceImpl implements WishlistService {
 		response.setImageUrl(product.getImageUrl());
 		response.setActive(product.getActive());
 		response.setCreatedAt(product.getCreatedAt());
+		Double averageRating = reviewRepository.findAverageRatingByProduct(product);
+		response.setAverageRating(averageRating == null ? 0.0 : Math.round(averageRating * 10.0) / 10.0);
+		response.setReviewCount(reviewRepository.countByProduct(product));
 		return response;
 	}
 }

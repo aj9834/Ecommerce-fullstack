@@ -1,0 +1,336 @@
+{"kind":"deck","id":"pr/tbfv0y","name":"Deck"}
+{"kind":"layout","layoutId":"1a2b1be2-0d22-41f3-8fd3-9644be995968","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"26b1b75f-5f1c-41c0-96d3-a0d1345cee47","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/q9p3ql","slide":1,"title":"MINOR PROJECT  /  FULL-STACK ENGINEERING","textShapes":8}
+{"kind":"shape","id":"sh/z25kb6xk","slide":1,"name":"cover-green-field","bbox":[0,0,746,720]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":1,"name":"cover-orange-rule","bbox":[0,0,92,7]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":1,"name":"cover-kicker","text":"MINOR PROJECT  /  FULL-STACK ENGINEERING","textPreview":"MINOR PROJECT  /  FULL-STACK ENGINEERING","textChars":40,"textLines":1,"bbox":[52,55,610,28]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":1,"name":"cover-title","text":"MERCATO","textPreview":"MERCATO","textChars":7,"textLines":1,"bbox":[52,126,620,80]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":1,"name":"cover-subtitle","text":"A secure end-to-end e-commerce platform","textPreview":"A secure end-to-end e-commerce platform","textChars":39,"textLines":1,"bbox":[52,208,585,68]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":1,"name":"cover-stack","text":"React 19  •  Spring Boot 3  •  MySQL  •  JWT  •  Razorpay","textPreview":"React 19  •  Spring Boot 3  •  MySQL  •  JWT  •  Razorpay","textChars":57,"textLines":1,"bbox":[52,293,620,34]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":1,"name":"cover-team-label","text":"TEAM MEMBERS","textPreview":"TEAM MEMBERS","textChars":12,"textLines":1,"bbox":[52,395,200,28]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":1,"name":"cover-team","text":"Radhika  •  Oshi  •  Annu  •  Ashish\nJay  •  Suraj  •  Varun  •  Kartik","textPreview":"Radhika  •  Oshi  •  Annu  •  Ashish | Jay  •  Suraj  •  Varun  •  Kartik","textChars":71,"textLines":2,"bbox":[52,430,600,90]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":1,"name":"cover-detail","text":"Customer journey, business logic, security, persistence and administration","textPreview":"Customer journey, business logic, security, persistence and administration","textChars":74,"textLines":1,"bbox":[52,594,610,50]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":1,"name":"cover-page","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"image","id":"im/9s36hcrm","slide":1,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 02-dashboard.png","bbox":[720,0,560,720]}
+{"kind":"notes","id":"nt/q9p3ql","slide":1,"text":""}
+{"kind":"slide","id":"sl/07vwzf","slide":2,"title":"PROBLEM STATEMENT","textShapes":12}
+{"kind":"textbox","id":"sh/gvy90je9","slide":2,"name":"eyebrow-2","text":"PROBLEM STATEMENT","textPreview":"PROBLEM STATEMENT","textChars":17,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":2,"name":"title-2","text":"One connected journey, with the server as the source of truth","textPreview":"One connected journey, with the server as the source of truth","textChars":61,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":2,"name":"rule-2","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":2,"name":"footer-2","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":2,"name":"page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":2,"name":"login-frame","bbox":[682,160,556,426]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":2,"name":"label-bg-live application-704-182","bbox":[704,182,148,26]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":2,"name":"label-live application-704-182","text":"LIVE APPLICATION","textPreview":"LIVE APPLICATION","textChars":16,"textLines":1,"bbox":[714,187,128,17]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":2,"name":"problem-label","text":"THE PROBLEM","textPreview":"THE PROBLEM","textChars":11,"textLines":1,"bbox":[48,164,220,28]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":2,"name":"problem-bullet-1","bbox":[52,213,10,10]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":2,"name":"problem-text-1","text":"Shopping actions are often fragmented across discovery, saved intent, cart and payment.","textPreview":"Shopping actions are often fragmented across discovery, saved intent, cart and payment.","textChars":87,"textLines":1,"bbox":[76,205,546,66]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":2,"name":"problem-bullet-2","bbox":[52,283,10,10]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":2,"name":"problem-text-2","text":"Browser values cannot be trusted for identity, stock, totals or payment success.","textPreview":"Browser values cannot be trusted for identity, stock, totals or payment success.","textChars":80,"textLines":1,"bbox":[76,275,546,66]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":2,"name":"problem-bullet-3","bbox":[52,353,10,10]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":2,"name":"problem-text-3","text":"Administrators need controlled catalogue and user-cart visibility without exposing customer operations.","textPreview":"Administrators need controlled catalogue and user-cart visibility without exposing customer operations.","textChars":103,"textLines":1,"bbox":[76,345,546,66]}
+{"kind":"shape","id":"sh/94fu18jq","slide":2,"name":"problem-bullet-4","bbox":[52,423,10,10]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":2,"name":"problem-text-4","text":"The project needs a traceable path from one click to durable database state and back.","textPreview":"The project needs a traceable path from one click to durable database state and back.","textChars":85,"textLines":1,"bbox":[76,415,546,66]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":2,"name":"solution-band","bbox":[48,531,585,82]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":2,"name":"solution-title","text":"IMPLEMENTED RESPONSE","textPreview":"IMPLEMENTED RESPONSE","textChars":20,"textLines":1,"bbox":[68,548,240,22]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":2,"name":"solution-copy","text":"A JWT-secured React SPA backed by transactional Spring services and relational persistence.","textPreview":"A JWT-secured React SPA backed by transactional Spring services and relational persistence.","textChars":91,"textLines":1,"bbox":[68,572,535,34]}
+{"kind":"image","id":"im/rmhk3q5o","slide":2,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 01-login.png","bbox":[690,168,540,410]}
+{"kind":"notes","id":"nt/07vwzf","slide":2,"text":""}
+{"kind":"slide","id":"sl/zg0dxd","slide":3,"title":"SYSTEM ARCHITECTURE","textShapes":24}
+{"kind":"textbox","id":"sh/nap4r65w","slide":3,"name":"eyebrow-3","text":"SYSTEM ARCHITECTURE","textPreview":"SYSTEM ARCHITECTURE","textChars":19,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/cvixczed","slide":3,"name":"title-3","text":"A modular monolith with clear request and data boundaries","textPreview":"A modular monolith with clear request and data boundaries","textChars":57,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":3,"name":"rule-3","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":3,"name":"footer-3","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":3,"name":"page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/cj6tovah","slide":3,"name":"flow-chevron-1","bbox":[262,293,35,42]}
+{"kind":"shape","id":"sh/54zidony","slide":3,"name":"flow-chevron-2","bbox":[494,293,35,42]}
+{"kind":"shape","id":"sh/u9knih4b","slide":3,"name":"flow-chevron-3","bbox":[726,293,35,42]}
+{"kind":"shape","id":"sh/judg7ads","slide":3,"name":"flow-chevron-4","bbox":[958,293,35,42]}
+{"kind":"shape","id":"sh/nyd0z610","slide":3,"name":"arch-node-1","bbox":[48,246,210,138]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":3,"name":"arch-title-1","text":"REACT SPA","textPreview":"REACT SPA","textChars":9,"textLines":1,"bbox":[66,270,174,26]}
+{"kind":"textbox","id":"sh/54zidony","slide":3,"name":"arch-body-1","text":"Pages • Context • Hooks","textPreview":"Pages • Context • Hooks","textChars":23,"textLines":1,"bbox":[66,311,174,50]}
+{"kind":"shape","id":"sh/cj6tovah","slide":3,"name":"arch-node-2","bbox":[280,246,210,138]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":3,"name":"arch-title-2","text":"AXIOS + JWT","textPreview":"AXIOS + JWT","textChars":11,"textLines":1,"bbox":[298,270,174,26]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":3,"name":"arch-body-2","text":"REST calls • Bearer token","textPreview":"REST calls • Bearer token","textChars":25,"textLines":1,"bbox":[298,311,174,50]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":3,"name":"arch-node-3","bbox":[512,246,210,138]}
+{"kind":"textbox","id":"sh/cvixczed","slide":3,"name":"arch-title-3","text":"SPRING BOOT","textPreview":"SPRING BOOT","textChars":11,"textLines":1,"bbox":[530,270,174,26]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":3,"name":"arch-body-3","text":"Security • Controllers • Services","textPreview":"Security • Controllers • Services","textChars":33,"textLines":1,"bbox":[530,311,174,50]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":3,"name":"arch-node-4","bbox":[744,246,210,138]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":3,"name":"arch-title-4","text":"JPA / HIBERNATE","textPreview":"JPA / HIBERNATE","textChars":15,"textLines":1,"bbox":[762,270,174,26]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":3,"name":"arch-body-4","text":"Repositories • ORM • Locks","textPreview":"Repositories • ORM • Locks","textChars":26,"textLines":1,"bbox":[762,311,174,50]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":3,"name":"arch-node-5","bbox":[976,246,210,138]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":3,"name":"arch-title-5","text":"MYSQL","textPreview":"MYSQL","textChars":5,"textLines":1,"bbox":[994,270,174,26]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":3,"name":"arch-body-5","text":"8 relational tables • constraints","textPreview":"8 relational tables • constraints","textChars":33,"textLines":1,"bbox":[994,311,174,50]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":3,"name":"arch-external-label","text":"EXTERNAL ADAPTERS","textPreview":"EXTERNAL ADAPTERS","textChars":17,"textLines":1,"bbox":[512,425,210,22]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":3,"name":"adapter-1","bbox":[390,461,150,75]}
+{"kind":"textbox","id":"sh/9knih4by","slide":3,"name":"adapter-title-1","text":"RAZORPAY","textPreview":"RAZORPAY","textChars":8,"textLines":1,"bbox":[400,476,130,20]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":3,"name":"adapter-body-1","text":"Order + signature","textPreview":"Order + signature","textChars":17,"textLines":1,"bbox":[400,503,130,18]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":3,"name":"adapter-2","bbox":[550,461,150,75]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":3,"name":"adapter-title-2","text":"GMAIL SMTP","textPreview":"GMAIL SMTP","textChars":10,"textLines":1,"bbox":[560,476,130,20]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":3,"name":"adapter-body-2","text":"Reset link","textPreview":"Reset link","textChars":10,"textLines":1,"bbox":[560,503,130,18]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":3,"name":"adapter-3","bbox":[710,461,150,75]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":3,"name":"adapter-title-3","text":"FILE STORAGE","textPreview":"FILE STORAGE","textChars":12,"textLines":1,"bbox":[720,476,130,20]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":3,"name":"adapter-body-3","text":"Review images","textPreview":"Review images","textChars":13,"textLines":1,"bbox":[720,503,130,18]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":3,"name":"arch-points-bullet-1","bbox":[70,583,8,8]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":3,"name":"arch-points-text-1","text":"Controller → service → repository separation keeps transport, business rules and persistence distinct.","textPreview":"Controller → service → repository separation keeps transport, business rules and persistence distinct.","textChars":102,"textLines":1,"bbox":[94,575,1066,27]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":3,"name":"arch-points-bullet-2","bbox":[70,614,8,8]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":3,"name":"arch-points-text-2","text":"DTO validation defines API contracts; MySQL constraints remain the final integrity boundary.","textPreview":"DTO validation defines API contracts; MySQL constraints remain the final integrity boundary.","textChars":92,"textLines":1,"bbox":[94,606,1066,27]}
+{"kind":"shape","id":"sh/8v6psfil","slide":3,"name":"arch-points-bullet-3","bbox":[70,645,8,8]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":3,"name":"arch-points-text-3","text":"React owns interaction state; the backend owns roles, stock, totals, payment status and durable records.","textPreview":"React owns interaction state; the backend owns roles, stock, totals, payment status and durable records.","textChars":104,"textLines":1,"bbox":[94,637,1066,27]}
+{"kind":"notes","id":"nt/zg0dxd","slide":3,"text":""}
+{"kind":"slide","id":"sl/itewhe","slide":4,"title":"IDENTITY AND SECURITY","textShapes":12}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":4,"name":"eyebrow-4","text":"IDENTITY AND SECURITY","textPreview":"IDENTITY AND SECURITY","textChars":21,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":4,"name":"title-4","text":"Authentication is stateless; authorization remains server-enforced","textPreview":"Authentication is stateless; authorization remains server-enforced","textChars":66,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/y90je9cv","slide":4,"name":"rule-4","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":4,"name":"footer-4","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":4,"name":"page-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":4,"name":"profile-frame","bbox":[652,156,586,462]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":4,"name":"label-bg-profile & role-676-180","bbox":[676,180,148,26]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":4,"name":"label-profile & role-676-180","text":"PROFILE & ROLE","textPreview":"PROFILE & ROLE","textChars":14,"textLines":1,"bbox":[686,185,128,17]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":4,"name":"auth-flow","text":"REGISTER / LOGIN","textPreview":"REGISTER / LOGIN","textChars":16,"textLines":1,"bbox":[52,165,250,24]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":4,"name":"auth-flow-detail","text":"Validate → BCrypt → AuthenticationManager → signed 24-hour JWT","textPreview":"Validate → BCrypt → AuthenticationManager → signed 24-hour JWT","textChars":62,"textLines":1,"bbox":[52,194,550,48]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":4,"name":"auth-bullet-1","bbox":[52,283,10,10]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":4,"name":"auth-text-1","text":"Axios attaches the Bearer token; JwtFilter validates signature and expiry before protected controllers.","textPreview":"Axios attaches the Bearer token; JwtFilter validates signature and expiry before protected controllers.","textChars":103,"textLines":1,"bbox":[76,275,531,68]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":4,"name":"auth-bullet-2","bbox":[52,355,10,10]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":4,"name":"auth-text-2","text":"The current role is reloaded from MySQL as ROLE_USER or ROLE_ADMIN on every authenticated request.","textPreview":"The current role is reloaded from MySQL as ROLE_USER or ROLE_ADMIN on every authenticated request.","textChars":98,"textLines":1,"bbox":[76,347,531,68]}
+{"kind":"shape","id":"sh/gvy90je9","slide":4,"name":"auth-bullet-3","bbox":[52,427,10,10]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":4,"name":"auth-text-3","text":"Forgot-password stores only a SHA-256 token digest, expires after 30 minutes and is single-use.","textPreview":"Forgot-password stores only a SHA-256 token digest, expires after 30 minutes and is single-use.","textChars":95,"textLines":1,"bbox":[76,419,531,68]}
+{"kind":"shape","id":"sh/2t83itgf","slide":4,"name":"auth-bullet-4","bbox":[52,499,10,10]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":4,"name":"auth-text-4","text":"Profile email changes issue a new JWT because the token subject is the user's email.","textPreview":"Profile email changes issue a new JWT because the token subject is the user's email.","textChars":84,"textLines":1,"bbox":[76,491,531,68]}
+{"kind":"shape","id":"sh/nap4r65w","slide":4,"name":"auth-note","bbox":[52,576,540,56]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":4,"name":"auth-note-copy","text":"Frontend route guards improve UX; Spring Security is the real access-control boundary.","textPreview":"Frontend route guards improve UX; Spring Security is the real access-control boundary.","textChars":86,"textLines":1,"bbox":[70,590,505,33]}
+{"kind":"image","id":"im/7mp0bi9s","slide":4,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 11-profile.png","bbox":[660,164,570,446]}
+{"kind":"notes","id":"nt/itewhe","slide":4,"text":""}
+{"kind":"slide","id":"sl/xwd2xg","slide":5,"title":"PRODUCT DISCOVERY","textShapes":11}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":5,"name":"eyebrow-5","text":"PRODUCT DISCOVERY","textPreview":"PRODUCT DISCOVERY","textChars":17,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":5,"name":"title-5","text":"Active catalogue data is enriched with stock and review aggregates","textPreview":"Active catalogue data is enriched with stock and review aggregates","textChars":66,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":5,"name":"rule-5","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":5,"name":"footer-5","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":5,"name":"page-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":5,"name":"products-frame","bbox":[497,147,741,286]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":5,"name":"detail-frame","bbox":[697,442,541,206]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":5,"name":"label-bg-catalogue-521-171","bbox":[521,171,148,26]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":5,"name":"label-catalogue-521-171","text":"CATALOGUE","textPreview":"CATALOGUE","textChars":9,"textLines":1,"bbox":[531,176,128,17]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":5,"name":"label-bg-product detail-721-466","bbox":[721,466,148,26]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":5,"name":"label-product detail-721-466","text":"PRODUCT DETAIL","textPreview":"PRODUCT DETAIL","textChars":14,"textLines":1,"bbox":[731,471,128,17]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":5,"name":"catalog-bullet-1","bbox":[52,179,10,10]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":5,"name":"catalog-text-1","text":"Customer queries return only products where active = true.","textPreview":"Customer queries return only products where active = true.","textChars":58,"textLines":1,"bbox":[76,171,381,78]}
+{"kind":"shape","id":"sh/svu9knih","slide":5,"name":"catalog-bullet-2","bbox":[52,261,10,10]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":5,"name":"catalog-text-2","text":"Search supports keyword, category, both, or neither through one endpoint.","textPreview":"Search supports keyword, category, both, or neither through one endpoint.","textChars":73,"textLines":1,"bbox":[76,253,381,78]}
+{"kind":"shape","id":"sh/adsji5sn","slide":5,"name":"catalog-bullet-3","bbox":[52,343,10,10]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":5,"name":"catalog-text-3","text":"ProductResponse adds averageRating and reviewCount without exposing JPA entities.","textPreview":"ProductResponse adds averageRating and reviewCount without exposing JPA entities.","textChars":81,"textLines":1,"bbox":[76,335,381,78]}
+{"kind":"shape","id":"sh/vu9knih4","slide":5,"name":"catalog-bullet-4","bbox":[52,425,10,10]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":5,"name":"catalog-text-4","text":"The detail screen loads product and reviews concurrently and caps quantity at current stock.","textPreview":"The detail screen loads product and reviews concurrently and caps quantity at current stock.","textChars":92,"textLines":1,"bbox":[76,417,381,78]}
+{"kind":"shape","id":"sh/d0z61032","slide":5,"name":"catalog-bullet-5","bbox":[52,507,10,10]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":5,"name":"catalog-text-5","text":"Soft deletion preserves cart, review and order references while hiding the item from customers.","textPreview":"Soft deletion preserves cart, review and order references while hiding the item from customers.","textChars":95,"textLines":1,"bbox":[76,499,381,78]}
+{"kind":"image","id":"im/47y1kre1","slide":5,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 03-products.png","bbox":[505,155,725,270]}
+{"kind":"image","id":"im/tsvu9kni","slide":5,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 09-product-detail.png","bbox":[705,450,525,190]}
+{"kind":"notes","id":"nt/xwd2xg","slide":5,"text":""}
+{"kind":"slide","id":"sl/18bxn5","slide":6,"title":"WISHLIST AND REVIEWS","textShapes":14}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":6,"name":"eyebrow-6","text":"WISHLIST AND REVIEWS","textPreview":"WISHLIST AND REVIEWS","textChars":20,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":6,"name":"title-6","text":"Saved intent and customer feedback are account-linked, persistent features","textPreview":"Saved intent and customer feedback are account-linked, persistent features","textChars":74,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":6,"name":"rule-6","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":6,"name":"footer-6","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/knih4byh","slide":6,"name":"page-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/v6psfil0","slide":6,"name":"wishlist-frame","bbox":[40,146,496,331]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":6,"name":"reviews-frame","bbox":[542,146,696,331]}
+{"kind":"shape","id":"sh/6psfil0r","slide":6,"name":"label-bg-wishlist-64-170","bbox":[64,170,148,26]}
+{"kind":"textbox","id":"sh/val87ed8","slide":6,"name":"label-wishlist-64-170","text":"WISHLIST","textPreview":"WISHLIST","textChars":8,"textLines":1,"bbox":[74,175,128,17]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":6,"name":"label-bg-reviews-566-170","bbox":[566,170,148,26]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":6,"name":"label-reviews-566-170","text":"REVIEWS","textPreview":"REVIEWS","textChars":7,"textLines":1,"bbox":[576,175,128,17]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":6,"name":"engagement-accent-0","bbox":[48,505,28,6]}
+{"kind":"textbox","id":"sh/vixczed8","slide":6,"name":"engagement-title-0","text":"OPTIMISTIC UI","textPreview":"OPTIMISTIC UI","textChars":13,"textLines":1,"bbox":[48,523,260,22]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":6,"name":"engagement-body-0","text":"Heart toggles immediately; failure restores the previous Set.","textPreview":"Heart toggles immediately; failure restores the previous Set.","textChars":61,"textLines":1,"bbox":[48,552,260,72]}
+{"kind":"shape","id":"sh/donyd0z6","slide":6,"name":"engagement-accent-1","bbox":[350,505,28,6]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":6,"name":"engagement-title-1","text":"UNIQUENESS","textPreview":"UNIQUENESS","textChars":10,"textLines":1,"bbox":[350,523,260,22]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":6,"name":"engagement-body-1","text":"One wishlist and one review row per user-product pair.","textPreview":"One wishlist and one review row per user-product pair.","textChars":54,"textLines":1,"bbox":[350,552,260,72]}
+{"kind":"shape","id":"sh/judg7ads","slide":6,"name":"engagement-accent-2","bbox":[652,505,28,6]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":6,"name":"engagement-title-2","text":"REVIEW UPSERT","textPreview":"REVIEW UPSERT","textChars":13,"textLines":1,"bbox":[652,523,260,22]}
+{"kind":"textbox","id":"sh/1032lszq","slide":6,"name":"engagement-body-2","text":"Submitting again updates rating, comment and optional image.","textPreview":"Submitting again updates rating, comment and optional image.","textChars":60,"textLines":1,"bbox":[652,552,260,72]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":6,"name":"engagement-accent-3","bbox":[954,505,28,6]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":6,"name":"engagement-title-3","text":"MULTIPART + AGGREGATE","textPreview":"MULTIPART + AGGREGATE","textChars":21,"textLines":1,"bbox":[954,523,260,22]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":6,"name":"engagement-body-3","text":"UUID image storage plus average/count refresh.","textPreview":"UUID image storage plus average/count refresh.","textChars":46,"textLines":1,"bbox":[954,552,260,72]}
+{"kind":"image","id":"im/oj2t83it","slide":6,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 04-wishlist.png","bbox":[48,154,480,315]}
+{"kind":"image","id":"im/d4vmtwra","slide":6,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 10-reviews.png","bbox":[550,154,680,315]}
+{"kind":"notes","id":"nt/18bxn5","slide":6,"text":""}
+{"kind":"slide","id":"sl/ocqvwl","slide":7,"title":"CART AND PRICING STATE","textShapes":12}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":7,"name":"eyebrow-7","text":"CART AND PRICING STATE","textPreview":"CART AND PRICING STATE","textChars":22,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/val87ed8","slide":7,"name":"title-7","text":"A persistent, user-owned aggregate bridges discovery and checkout","textPreview":"A persistent, user-owned aggregate bridges discovery and checkout","textChars":65,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/6psfil0r","slide":7,"name":"rule-7","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":7,"name":"footer-7","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":7,"name":"page-7","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/vixczed8","slide":7,"name":"cart-frame","bbox":[507,146,731,501]}
+{"kind":"shape","id":"sh/d0z61032","slide":7,"name":"label-bg-persistent cart-531-170","bbox":[531,170,148,26]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":7,"name":"label-persistent cart-531-170","text":"PERSISTENT CART","textPreview":"PERSISTENT CART","textChars":15,"textLines":1,"bbox":[541,175,128,17]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":7,"name":"cart-principle","text":"CORE RULE","textPreview":"CORE RULE","textChars":9,"textLines":1,"bbox":[52,164,160,24]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":7,"name":"cart-principle-copy","text":"The authenticated user's cart—not a userId in the payload—defines ownership.","textPreview":"The authenticated user's cart—not a userId in the payload—defines ownership.","textChars":76,"textLines":1,"bbox":[52,195,410,72]}
+{"kind":"shape","id":"sh/gr2p8nqx","slide":7,"name":"cart-bullet-1","bbox":[52,310,10,10]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":7,"name":"cart-text-1","text":"One cart per user is created lazily on the first read or add.","textPreview":"One cart per user is created lazily on the first read or add.","textChars":61,"textLines":1,"bbox":[76,302,391,62]}
+{"kind":"shape","id":"sh/yxobm58z","slide":7,"name":"cart-bullet-2","bbox":[52,376,10,10]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":7,"name":"cart-text-2","text":"Repeated adds merge quantity and preserve the add-time unit-price snapshot.","textPreview":"Repeated adds merge quantity and preserve the add-time unit-price snapshot.","textChars":75,"textLines":1,"bbox":[76,368,391,62]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":7,"name":"cart-bullet-3","bbox":[52,442,10,10]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":7,"name":"cart-text-3","text":"Update and delete verify that the cartItem belongs to the current user's cart.","textPreview":"Update and delete verify that the cartItem belongs to the current user's cart.","textChars":78,"textLines":1,"bbox":[76,434,391,62]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":7,"name":"cart-bullet-4","bbox":[52,508,10,10]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":7,"name":"cart-text-4","text":"Active state and stock are checked on add/update; quantity ≤ 0 removes the line.","textPreview":"Active state and stock are checked on add/update; quantity ≤ 0 removes the line.","textChars":80,"textLines":1,"bbox":[76,500,391,62]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":7,"name":"cart-bullet-5","bbox":[52,574,10,10]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":7,"name":"cart-text-5","text":"The UI previews GST, but checkout recalculates the authoritative total.","textPreview":"The UI previews GST, but checkout recalculates the authoritative total.","textChars":71,"textLines":1,"bbox":[76,566,391,62]}
+{"kind":"image","id":"im/za1gvy90","slide":7,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 05-cart.png","bbox":[515,154,715,485]}
+{"kind":"notes","id":"nt/ocqvwl","slide":7,"text":""}
+{"kind":"slide","id":"sl/v4enqg","slide":8,"title":"CHECKOUT AND PAYMENT","textShapes":11}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":8,"name":"eyebrow-8","text":"CHECKOUT AND PAYMENT","textPreview":"CHECKOUT AND PAYMENT","textChars":20,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":8,"name":"title-8","text":"Order creation locks stock, snapshots history and verifies online payment server-side","textPreview":"Order creation locks stock, snapshots history and verifies online payment server-side","textChars":85,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/fyxobm58","slide":8,"name":"rule-8","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":8,"name":"footer-8","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":8,"name":"page-8","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":8,"name":"checkout-frame","bbox":[40,146,676,491]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":8,"name":"order-frame","bbox":[727,389,511,248]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":8,"name":"label-bg-checkout-64-170","bbox":[64,170,148,26]}
+{"kind":"textbox","id":"sh/wval87ed","slide":8,"name":"label-checkout-64-170","text":"CHECKOUT","textPreview":"CHECKOUT","textChars":8,"textLines":1,"bbox":[74,175,128,17]}
+{"kind":"shape","id":"sh/7adsji5s","slide":8,"name":"label-bg-order history-751-413","bbox":[751,413,148,26]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":8,"name":"label-order history-751-413","text":"ORDER HISTORY","textPreview":"ORDER HISTORY","textChars":13,"textLines":1,"bbox":[761,418,128,17]}
+{"kind":"shape","id":"sh/psfil0rq","slide":8,"name":"checkout-bullet-1","bbox":[752,173,8,8]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":8,"name":"checkout-text-1","text":"@Transactional keeps stock decrement, order snapshots and cart clearing atomic.","textPreview":"@Transactional keeps stock decrement, order snapshots and cart clearing atomic.","textChars":79,"textLines":1,"bbox":[776,165,441,40]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":8,"name":"checkout-bullet-2","bbox":[752,217,8,8]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":8,"name":"checkout-text-2","text":"PESSIMISTIC_WRITE product locks prevent concurrent overselling.","textPreview":"PESSIMISTIC_WRITE product locks prevent concurrent overselling.","textChars":63,"textLines":1,"bbox":[776,209,441,40]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":8,"name":"checkout-bullet-3","bbox":[752,261,8,8]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":8,"name":"checkout-text-3","text":"BigDecimal calculates subtotal + 18% GST + free delivery on the server.","textPreview":"BigDecimal calculates subtotal + 18% GST + free delivery on the server.","textChars":71,"textLines":1,"bbox":[776,253,441,40]}
+{"kind":"shape","id":"sh/svu9knih","slide":8,"name":"checkout-bullet-4","bbox":[752,305,8,8]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":8,"name":"checkout-text-4","text":"COD creates PENDING_COD; online creates PAYMENT_PENDING then verifies the Razorpay signature.","textPreview":"COD creates PENDING_COD; online creates PAYMENT_PENDING then verifies the Razorpay signature.","textChars":93,"textLines":1,"bbox":[776,297,441,40]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":8,"name":"checkout-bullet-5","bbox":[752,349,8,8]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":8,"name":"checkout-text-5","text":"Current limitation: cancelled online payment keeps the pending order and reserved stock.","textPreview":"Current limitation: cancelled online payment keeps the pending order and reserved stock.","textChars":88,"textLines":1,"bbox":[776,341,441,40]}
+{"kind":"image","id":"im/5o7qpg3e","slide":8,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 06-checkout.png","bbox":[48,154,660,475]}
+{"kind":"image","id":"im/g3ex0nux","slide":8,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 12-orders.png","bbox":[735,397,495,232]}
+{"kind":"notes","id":"nt/v4enqg","slide":8,"text":""}
+{"kind":"slide","id":"sl/mfq94p","slide":9,"title":"ROLE-BASED ADMINISTRATION","textShapes":12}
+{"kind":"textbox","id":"sh/5sneloj2","slide":9,"name":"eyebrow-9","text":"ROLE-BASED ADMINISTRATION","textPreview":"ROLE-BASED ADMINISTRATION","textChars":25,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"name":"title-9","text":"Operational control is separated from the customer experience","textPreview":"Operational control is separated from the customer experience","textChars":61,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":9,"name":"rule-9","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"name":"footer-9","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":9,"name":"page-9","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":9,"name":"admin-frame","bbox":[40,146,786,501]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":9,"name":"label-bg-admin catalogue-64-170","bbox":[64,170,148,26]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":9,"name":"label-admin catalogue-64-170","text":"ADMIN CATALOGUE","textPreview":"ADMIN CATALOGUE","textChars":15,"textLines":1,"bbox":[74,175,128,17]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":9,"name":"admin-security","text":"SECURITY BOUNDARY","textPreview":"SECURITY BOUNDARY","textChars":17,"textLines":1,"bbox":[862,164,300,25]}
+{"kind":"textbox","id":"sh/knih4byh","slide":9,"name":"admin-security-copy","text":"/api/admin/** requires ROLE_ADMIN in Spring Security.","textPreview":"/api/admin/** requires ROLE_ADMIN in Spring Security.","textChars":53,"textLines":1,"bbox":[862,197,340,65]}
+{"kind":"shape","id":"sh/v6psfil0","slide":9,"name":"admin-bullet-1","bbox":[862,308,10,10]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":9,"name":"admin-text-1","text":"View active and inactive products.","textPreview":"View active and inactive products.","textChars":34,"textLines":1,"bbox":[886,300,326,56]}
+{"kind":"shape","id":"sh/d0z61032","slide":9,"name":"admin-bullet-2","bbox":[862,368,10,10]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":9,"name":"admin-text-2","text":"Create, update, deactivate and reactivate catalogue items.","textPreview":"Create, update, deactivate and reactivate catalogue items.","textChars":58,"textLines":1,"bbox":[886,360,326,56]}
+{"kind":"shape","id":"sh/vu9knih4","slide":9,"name":"admin-bullet-3","bbox":[862,428,10,10]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":9,"name":"admin-text-3","text":"List users while blocking deletion of ADMIN accounts.","textPreview":"List users while blocking deletion of ADMIN accounts.","textChars":53,"textLines":1,"bbox":[886,420,326,56]}
+{"kind":"shape","id":"sh/donyd0z6","slide":9,"name":"admin-bullet-4","bbox":[862,488,10,10]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":9,"name":"admin-text-4","text":"Inspect user carts without exposing a customer-side control path.","textPreview":"Inspect user carts without exposing a customer-side control path.","textChars":65,"textLines":1,"bbox":[886,480,326,56]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":9,"name":"admin-bullet-5","bbox":[862,548,10,10]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":9,"name":"admin-text-5","text":"Product removal is soft deletion: active becomes false.","textPreview":"Product removal is soft deletion: active becomes false.","textChars":55,"textLines":1,"bbox":[886,540,326,56]}
+{"kind":"image","id":"im/udg7adsj","slide":9,"name":"","geometry":"roundRect","alt":"Mercato application screenshot: 07-admin-products.png","bbox":[48,154,770,485]}
+{"kind":"notes","id":"nt/mfq94p","slide":9,"text":""}
+{"kind":"slide","id":"sl/3yet05","slide":10,"title":"RELATIONAL MODEL AND DATA FLOW","textShapes":26}
+{"kind":"textbox","id":"sh/ovahoza1","slide":10,"name":"eyebrow-10","text":"RELATIONAL MODEL AND DATA FLOW","textPreview":"RELATIONAL MODEL AND DATA FLOW","textChars":30,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":10,"name":"title-10","text":"Eight tables protect ownership, uniqueness and historical order state","textPreview":"Eight tables protect ownership, uniqueness and historical order state","textChars":69,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/6tovahoz","slide":10,"name":"rule-10","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":10,"name":"footer-10","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":10,"name":"page-10","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":10,"name":"relation-1","bbox":[240,248,82,1]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":10,"name":"relation-2","bbox":[468,248,82,1]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":10,"name":"relation-3","bbox":[240,375,82,1]}
+{"kind":"shape","id":"sh/oj2t83it","slide":10,"name":"relation-4","bbox":[468,375,82,1]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":10,"name":"relation-5","bbox":[240,502,82,1]}
+{"kind":"shape","id":"sh/vixczed8","slide":10,"name":"relation-6","bbox":[468,502,82,1]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":10,"name":"relation-7","bbox":[240,592,82,1]}
+{"kind":"shape","id":"sh/donyd0z6","slide":10,"name":"relation-8","bbox":[468,592,82,1]}
+{"kind":"shape","id":"sh/6psfil0r","slide":10,"name":"user-spine","bbox":[209,248,1,345]}
+{"kind":"shape","id":"sh/val87ed8","slide":10,"name":"product-spine","bbox":[581,248,1,345]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":10,"name":"entity-1","bbox":[70,202,170,92]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":10,"name":"entity-title-1","text":"USERS","textPreview":"USERS","textChars":5,"textLines":1,"bbox":[82,220,146,22]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":10,"name":"entity-body-1","text":"identity • role","textPreview":"identity • role","textChars":15,"textLines":1,"bbox":[80,253,150,20]}
+{"kind":"shape","id":"sh/v6psfil0","slide":10,"name":"entity-2","bbox":[322,202,146,92]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":10,"name":"entity-title-2","text":"CARTS","textPreview":"CARTS","textChars":5,"textLines":1,"bbox":[334,220,122,22]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":10,"name":"entity-body-2","text":"1 per user","textPreview":"1 per user","textChars":10,"textLines":1,"bbox":[332,253,126,20]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":10,"name":"entity-3","bbox":[550,202,170,92]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":10,"name":"entity-title-3","text":"CART ITEMS","textPreview":"CART ITEMS","textChars":10,"textLines":1,"bbox":[562,220,146,22]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":10,"name":"entity-body-3","text":"qty • price","textPreview":"qty • price","textChars":11,"textLines":1,"bbox":[560,253,150,20]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":10,"name":"entity-4","bbox":[322,329,146,92]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":10,"name":"entity-title-4","text":"ORDERS","textPreview":"ORDERS","textChars":6,"textLines":1,"bbox":[334,347,122,22]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":10,"name":"entity-body-4","text":"status • totals","textPreview":"status • totals","textChars":15,"textLines":1,"bbox":[332,380,126,20]}
+{"kind":"shape","id":"sh/neloj2t8","slide":10,"name":"entity-5","bbox":[550,329,170,92]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":10,"name":"entity-title-5","text":"ORDER ITEMS","textPreview":"ORDER ITEMS","textChars":11,"textLines":1,"bbox":[562,347,146,22]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":10,"name":"entity-body-5","text":"history snapshot","textPreview":"history snapshot","textChars":16,"textLines":1,"bbox":[560,380,150,20]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":10,"name":"entity-6","bbox":[322,456,146,92]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":10,"name":"entity-title-6","text":"WISHLIST","textPreview":"WISHLIST","textChars":8,"textLines":1,"bbox":[334,474,122,22]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":10,"name":"entity-body-6","text":"unique pair","textPreview":"unique pair","textChars":11,"textLines":1,"bbox":[332,507,126,20]}
+{"kind":"shape","id":"sh/4r65wjud","slide":10,"name":"entity-7","bbox":[550,456,170,92]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":10,"name":"entity-title-7","text":"PRODUCTS","textPreview":"PRODUCTS","textChars":8,"textLines":1,"bbox":[562,474,146,22]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":10,"name":"entity-body-7","text":"stock • active","textPreview":"stock • active","textChars":14,"textLines":1,"bbox":[560,507,150,20]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":10,"name":"entity-8","bbox":[322,546,146,92]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":10,"name":"entity-title-8","text":"REVIEWS","textPreview":"REVIEWS","textChars":7,"textLines":1,"bbox":[334,564,122,22]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":10,"name":"entity-body-8","text":"rating • image","textPreview":"rating • image","textChars":14,"textLines":1,"bbox":[332,597,126,20]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":10,"name":"db-rules-title","text":"DATABASE RULES","textPreview":"DATABASE RULES","textChars":14,"textLines":1,"bbox":[790,170,260,24]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":10,"name":"db-bullet-1","bbox":[790,224,10,10]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":10,"name":"db-text-1","text":"Unique email, one cart per user, and unique user-product wishlist/review pairs.","textPreview":"Unique email, one cart per user, and unique user-product wishlist/review pairs.","textChars":79,"textLines":1,"bbox":[814,216,396,72]}
+{"kind":"shape","id":"sh/i5sneloj","slide":10,"name":"db-bullet-2","bbox":[790,300,10,10]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":10,"name":"db-text-2","text":"Foreign keys connect every commerce operation to a valid user and product.","textPreview":"Foreign keys connect every commerce operation to a valid user and product.","textChars":74,"textLines":1,"bbox":[814,292,396,72]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":10,"name":"db-bullet-3","bbox":[790,376,10,10]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":10,"name":"db-text-3","text":"Cart item price and order item fields preserve commercial snapshots.","textPreview":"Cart item price and order item fields preserve commercial snapshots.","textChars":68,"textLines":1,"bbox":[814,368,396,72]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":10,"name":"db-bullet-4","bbox":[790,452,10,10]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":10,"name":"db-text-4","text":"Checkout locks product rows and commits stock, order and cart changes together.","textPreview":"Checkout locks product rows and commits stock, order and cart changes together.","textChars":79,"textLines":1,"bbox":[814,444,396,72]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":10,"name":"db-bullet-5","bbox":[790,528,10,10]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":10,"name":"db-text-5","text":"Response DTOs return safe, purpose-specific JSON instead of entity graphs.","textPreview":"Response DTOs return safe, purpose-specific JSON instead of entity graphs.","textChars":74,"textLines":1,"bbox":[814,520,396,72]}
+{"kind":"notes","id":"nt/3yet05","slide":10,"text":""}
+{"kind":"slide","id":"sl/qld5ap","slide":11,"title":"TEAM OWNERSHIP AND LIVE DEMONSTRATION","textShapes":37}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":11,"name":"eyebrow-11","text":"TEAM OWNERSHIP AND LIVE DEMONSTRATION","textPreview":"TEAM OWNERSHIP AND LIVE DEMONSTRATION","textChars":37,"textLines":1,"bbox":[48,30,420,24]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":11,"name":"title-11","text":"Each presenter owns one vertical slice and its cross-module dependencies","textPreview":"Each presenter owns one vertical slice and its cross-module dependencies","textChars":72,"textLines":1,"bbox":[48,57,1150,58]}
+{"kind":"shape","id":"sh/psfil0rq","slide":11,"name":"rule-11","bbox":[48,119,86,5]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":11,"name":"footer-11","text":"MERCATO  /  TECHNICAL PRESENTATION","textPreview":"MERCATO  /  TECHNICAL PRESENTATION","textChars":34,"textLines":1,"bbox":[44,681,420,20]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":11,"name":"page-11","text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1185,678,48,22]}
+{"kind":"textbox","id":"sh/wval87ed","slide":11,"name":"owners-label","text":"PRESENTATION OWNERS","textPreview":"PRESENTATION OWNERS","textChars":19,"textLines":1,"bbox":[48,154,320,24]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":11,"name":"owner-name-0","text":"Oshi","textPreview":"Oshi","textChars":4,"textLines":1,"bbox":[48,190,130,26]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":11,"name":"owner-module-0","text":"Introduction & architecture","textPreview":"Introduction & architecture","textChars":27,"textLines":1,"bbox":[185,190,390,28]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":11,"name":"owner-rule-0","bbox":[48,223,520,1]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":11,"name":"owner-name-1","text":"Radhika","textPreview":"Radhika","textChars":7,"textLines":1,"bbox":[48,242,130,26]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":11,"name":"owner-module-1","text":"Authentication & profile","textPreview":"Authentication & profile","textChars":24,"textLines":1,"bbox":[185,242,390,28]}
+{"kind":"shape","id":"sh/xobm58z2","slide":11,"name":"owner-rule-1","bbox":[48,275,520,1]}
+{"kind":"textbox","id":"sh/83itgfml","slide":11,"name":"owner-name-2","text":"Ashish","textPreview":"Ashish","textChars":6,"textLines":1,"bbox":[48,294,130,26]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":11,"name":"owner-module-2","text":"Catalogue & product detail","textPreview":"Catalogue & product detail","textChars":26,"textLines":1,"bbox":[185,294,390,28]}
+{"kind":"shape","id":"sh/m94fu18j","slide":11,"name":"owner-rule-2","bbox":[48,327,520,1]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":11,"name":"owner-name-3","text":"Jay","textPreview":"Jay","textChars":3,"textLines":1,"bbox":[48,346,130,26]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":11,"name":"owner-module-3","text":"Wishlist & reviews","textPreview":"Wishlist & reviews","textChars":18,"textLines":1,"bbox":[185,346,390,28]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":11,"name":"owner-rule-3","bbox":[48,379,520,1]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":11,"name":"owner-name-4","text":"Suraj","textPreview":"Suraj","textChars":5,"textLines":1,"bbox":[48,398,130,26]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":11,"name":"owner-module-4","text":"Cart & pricing state","textPreview":"Cart & pricing state","textChars":20,"textLines":1,"bbox":[185,398,390,28]}
+{"kind":"shape","id":"sh/nap4r65w","slide":11,"name":"owner-rule-4","bbox":[48,431,520,1]}
+{"kind":"textbox","id":"sh/cvixczed","slide":11,"name":"owner-name-5","text":"Varun","textPreview":"Varun","textChars":5,"textLines":1,"bbox":[48,450,130,26]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":11,"name":"owner-module-5","text":"Checkout, orders & Razorpay","textPreview":"Checkout, orders & Razorpay","textChars":27,"textLines":1,"bbox":[185,450,390,28]}
+{"kind":"shape","id":"sh/udg7adsj","slide":11,"name":"owner-rule-5","bbox":[48,483,520,1]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":11,"name":"owner-name-6","text":"Kartik","textPreview":"Kartik","textChars":6,"textLines":1,"bbox":[48,502,130,26]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":11,"name":"owner-module-6","text":"Administration","textPreview":"Administration","textChars":14,"textLines":1,"bbox":[185,502,390,28]}
+{"kind":"shape","id":"sh/54zidony","slide":11,"name":"owner-rule-6","bbox":[48,535,520,1]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":11,"name":"owner-name-7","text":"Annu","textPreview":"Annu","textChars":4,"textLines":1,"bbox":[48,554,130,26]}
+{"kind":"textbox","id":"sh/judg7ads","slide":11,"name":"owner-module-7","text":"Database, integration & conclusion","textPreview":"Database, integration & conclusion","textChars":34,"textLines":1,"bbox":[185,554,390,28]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":11,"name":"owner-rule-7","bbox":[48,587,520,1]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":11,"name":"demo-field","bbox":[635,154,595,425]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":11,"name":"demo-title","text":"LIVE DEMO SEQUENCE","textPreview":"LIVE DEMO SEQUENCE","textChars":18,"textLines":1,"bbox":[668,184,320,28]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":11,"name":"demo-number-bg-0","bbox":[668,232,29,29]}
+{"kind":"textbox","id":"sh/9knih4by","slide":11,"name":"demo-number-0","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[668,237,29,18]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":11,"name":"demo-step-0","text":"Login → profile and role","textPreview":"Login → profile and role","textChars":24,"textLines":1,"bbox":[716,234,470,31]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":11,"name":"demo-number-bg-1","bbox":[668,277,29,29]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":11,"name":"demo-number-1","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[668,282,29,18]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":11,"name":"demo-step-1","text":"Browse → search → product detail","textPreview":"Browse → search → product detail","textChars":32,"textLines":1,"bbox":[716,279,470,31]}
+{"kind":"shape","id":"sh/gvy90je9","slide":11,"name":"demo-number-bg-2","bbox":[668,322,29,29]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":11,"name":"demo-number-2","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[668,327,29,18]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":11,"name":"demo-step-2","text":"Save to wishlist → review","textPreview":"Save to wishlist → review","textChars":25,"textLines":1,"bbox":[716,324,470,31]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":11,"name":"demo-number-bg-3","bbox":[668,367,29,29]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":11,"name":"demo-number-3","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[668,372,29,18]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":11,"name":"demo-step-3","text":"Add to cart → update quantity","textPreview":"Add to cart → update quantity","textChars":29,"textLines":1,"bbox":[716,369,470,31]}
+{"kind":"shape","id":"sh/dg7adsji","slide":11,"name":"demo-number-bg-4","bbox":[668,412,29,29]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":11,"name":"demo-number-4","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[668,417,29,18]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":11,"name":"demo-step-4","text":"Checkout → COD/Razorpay explanation","textPreview":"Checkout → COD/Razorpay explanation","textChars":35,"textLines":1,"bbox":[716,414,470,31]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":11,"name":"demo-number-bg-5","bbox":[668,457,29,29]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":11,"name":"demo-number-5","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[668,462,29,18]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":11,"name":"demo-step-5","text":"Order history → stock/database proof","textPreview":"Order history → stock/database proof","textChars":36,"textLines":1,"bbox":[716,459,470,31]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":11,"name":"demo-number-bg-6","bbox":[668,502,29,29]}
+{"kind":"textbox","id":"sh/lwval87e","slide":11,"name":"demo-number-6","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[668,507,29,18]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":11,"name":"demo-step-6","text":"Admin product and user-cart view","textPreview":"Admin product and user-cart view","textChars":32,"textLines":1,"bbox":[716,504,470,31]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":11,"name":"closing-band","bbox":[635,597,595,55]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":11,"name":"closing-copy","text":"One user action remains traceable from React to MySQL—and back to the UI.","textPreview":"One user action remains traceable from React to MySQL—and back to the UI.","textChars":73,"textLines":1,"bbox":[658,611,550,30]}
+{"kind":"notes","id":"nt/qld5ap","slide":11,"text":""}

@@ -1,0 +1,343 @@
+{"kind":"deck","id":"pr/rire39","name":"Deck"}
+{"kind":"layout","layoutId":"f4dbdfe5-1fe0-4375-9869-c27916f7e3fd","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"c07f278a-81be-41ea-8d77-526ad932af85","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/435x0a","slide":1,"title":"Dashboard experience","textShapes":8}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":1,"bbox":[598,86,618,458]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":1,"bbox":[616,498,260,30]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":1,"text":"Dashboard experience","textPreview":"Dashboard experience","textChars":20,"textLines":1,"bbox":[628,504,240,20]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":1,"bbox":[70,78,210,34]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":1,"text":"FULL STACK E-COMMERCE","textPreview":"FULL STACK E-COMMERCE","textChars":21,"textLines":1,"bbox":[84,86,182,18]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":1,"text":"Mercato","textPreview":"Mercato","textChars":7,"textLines":1,"bbox":[70,145,430,72]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":1,"text":"E-Commerce Application Presentation","textPreview":"E-Commerce Application Presentation","textChars":35,"textLines":1,"bbox":[72,226,450,88]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":1,"text":"A React + Spring Boot + MySQL shopping platform covering customer journeys, admin operations, payments, reviews, and database-backed integration.","textPreview":"A React + Spring Boot + MySQL shopping platform covering customer journeys, admin operations, payments, reviews, and database-backed inte...","textChars":145,"textLines":1,"bbox":[74,332,450,104]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"12-slide project summary | 8 member modules","textPreview":"12-slide project summary | 8 member modules","textChars":43,"textLines":1,"bbox":[74,506,430,26]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/5kb6xkf6","slide":1,"name":"","geometry":"roundRect","alt":"Dashboard experience screenshot","bbox":[602,90,610,450]}
+{"kind":"notes","id":"nt/435x0a","slide":1,"text":""}
+{"kind":"slide","id":"sl/838j33","slide":2,"title":"Problem, Scope and Team Modules","textShapes":22}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":2,"text":"Problem, Scope and Team Modules","textPreview":"Problem, Scope and Team Modules","textChars":31,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":2,"text":"Problem statement is kept focused: make online shopping, order placement, and admin control work in one integrated system.","textPreview":"Problem statement is kept focused: make online shopping, order placement, and admin control work in one integrated system.","textChars":122,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":2,"bbox":[786,146,388,222]}
+{"kind":"shape","id":"sh/94fu18jq","slide":2,"bbox":[804,322,260,30]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":2,"text":"Customer catalogue","textPreview":"Customer catalogue","textChars":18,"textLines":1,"bbox":[816,328,240,20]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":2,"bbox":[786,400,388,222]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":2,"bbox":[804,576,260,30]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":2,"text":"Admin control","textPreview":"Admin control","textChars":13,"textLines":1,"bbox":[816,582,240,20]}
+{"kind":"shape","id":"sh/8v6psfil","slide":2,"bbox":[76,150,300,88]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":2,"text":"Member 1","textPreview":"Member 1","textChars":8,"textLines":1,"bbox":[94,164,110,20]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":2,"text":"Introduction and system architecture","textPreview":"Introduction and system architecture","textChars":36,"textLines":1,"bbox":[94,190,258,42]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":2,"bbox":[411,150,300,88]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":2,"text":"Member 2","textPreview":"Member 2","textChars":8,"textLines":1,"bbox":[429,164,110,20]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":2,"text":"Authentication, security and profile","textPreview":"Authentication, security and profile","textChars":36,"textLines":1,"bbox":[429,190,258,42]}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":2,"bbox":[76,258,300,88]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":2,"text":"Member 3","textPreview":"Member 3","textChars":8,"textLines":1,"bbox":[94,272,110,20]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":2,"text":"Product catalogue and discovery","textPreview":"Product catalogue and discovery","textChars":31,"textLines":1,"bbox":[94,298,258,42]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":2,"bbox":[411,258,300,88]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":2,"text":"Member 4","textPreview":"Member 4","textChars":8,"textLines":1,"bbox":[429,272,110,20]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":2,"text":"Wishlist, rating, reviews and image upload","textPreview":"Wishlist, rating, reviews and image upload","textChars":42,"textLines":1,"bbox":[429,298,258,42]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":2,"bbox":[76,366,300,88]}
+{"kind":"textbox","id":"sh/83itgfml","slide":2,"text":"Member 5","textPreview":"Member 5","textChars":8,"textLines":1,"bbox":[94,380,110,20]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":2,"text":"Cart and pricing state","textPreview":"Cart and pricing state","textChars":22,"textLines":1,"bbox":[94,406,258,42]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":2,"bbox":[411,366,300,88]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":2,"text":"Member 6","textPreview":"Member 6","textChars":8,"textLines":1,"bbox":[429,380,110,20]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":2,"text":"Checkout, orders and Razorpay","textPreview":"Checkout, orders and Razorpay","textChars":29,"textLines":1,"bbox":[429,406,258,42]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":2,"bbox":[76,474,300,88]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":2,"text":"Member 7","textPreview":"Member 7","textChars":8,"textLines":1,"bbox":[94,488,110,20]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":2,"text":"Administration and role-based access","textPreview":"Administration and role-based access","textChars":36,"textLines":1,"bbox":[94,514,258,42]}
+{"kind":"shape","id":"sh/1orytsvu","slide":2,"bbox":[411,474,300,88]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":2,"text":"Member 8","textPreview":"Member 8","textChars":8,"textLines":1,"bbox":[429,488,110,20]}
+{"kind":"textbox","id":"sh/judg7ads","slide":2,"text":"Operations, database integration and conclusion","textPreview":"Operations, database integration and conclusion","textChars":47,"textLines":1,"bbox":[429,514,258,42]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":2,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/1032lszq","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/l87ed8ba","slide":2,"name":"","geometry":"roundRect","alt":"Customer catalogue screenshot","bbox":[790,150,380,214]}
+{"kind":"image","id":"im/lwval87e","slide":2,"name":"","geometry":"roundRect","alt":"Admin control screenshot","bbox":[790,404,380,214]}
+{"kind":"notes","id":"nt/838j33","slide":2,"text":""}
+{"kind":"slide","id":"sl/fbvcq9","slide":3,"title":"System Architecture","textShapes":15}
+{"kind":"textbox","id":"sh/1orytsvu","slide":3,"text":"System Architecture","textPreview":"System Architecture","textChars":19,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":3,"text":"High-level project view without code: customer UI, admin UI, services, integrations and database.","textPreview":"High-level project view without code: customer UI, admin UI, services, integrations and database.","textChars":97,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":3,"bbox":[70,210,180,86]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":3,"text":"Customer UI\nReact pages","textPreview":"Customer UI | React pages","textChars":23,"textLines":2,"bbox":[84,225,152,60]}
+{"kind":"shape","id":"sh/1032lszq","slide":3,"bbox":[250,252,70,4]}
+{"kind":"shape","id":"sh/u9knih4b","slide":3,"bbox":[320,210,210,86]}
+{"kind":"textbox","id":"sh/judg7ads","slide":3,"text":"API Layer\nAuth, products, cart","textPreview":"API Layer | Auth, products, cart","textChars":30,"textLines":2,"bbox":[334,225,182,60]}
+{"kind":"shape","id":"sh/cj6tovah","slide":3,"bbox":[530,252,70,4]}
+{"kind":"shape","id":"sh/54zidony","slide":3,"bbox":[600,210,210,86]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":3,"text":"Spring Boot\nBusiness services","textPreview":"Spring Boot | Business services","textChars":29,"textLines":2,"bbox":[614,225,182,60]}
+{"kind":"shape","id":"sh/0je9cvix","slide":3,"bbox":[810,252,70,4]}
+{"kind":"shape","id":"sh/byhgn29g","slide":3,"bbox":[880,210,210,86]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":3,"text":"MySQL\nPersistent records","textPreview":"MySQL | Persistent records","textChars":24,"textLines":2,"bbox":[894,225,182,60]}
+{"kind":"shape","id":"sh/tcj6tova","slide":3,"bbox":[180,388,230,78]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":3,"text":"Admin Panel\nRole-based operations","textPreview":"Admin Panel | Role-based operations","textChars":33,"textLines":2,"bbox":[194,403,202,52]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":3,"bbox":[500,388,210,78]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":3,"text":"JWT Security\nProtected access","textPreview":"JWT Security | Protected access","textChars":29,"textLines":2,"bbox":[514,403,182,52]}
+{"kind":"shape","id":"sh/tovahoza","slide":3,"bbox":[800,388,220,78]}
+{"kind":"textbox","id":"sh/032lszqt","slide":3,"text":"Razorpay\nPayment gateway","textPreview":"Razorpay | Payment gateway","textChars":24,"textLines":2,"bbox":[814,403,192,52]}
+{"kind":"shape","id":"sh/czed8v6p","slide":3,"bbox":[410,426,90,4]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":3,"bbox":[710,426,90,4]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":3,"bbox":[61,516,238,137]}
+{"kind":"shape","id":"sh/cbulwval","slide":3,"bbox":[79,607,202,30]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":3,"text":"Login","textPreview":"Login","textChars":5,"textLines":1,"bbox":[91,613,178,20]}
+{"kind":"shape","id":"sh/u54zidon","slide":3,"bbox":[368,516,238,137]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":3,"bbox":[386,607,202,30]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":3,"text":"Dashboard","textPreview":"Dashboard","textChars":9,"textLines":1,"bbox":[398,613,178,20]}
+{"kind":"shape","id":"sh/v6psfil0","slide":3,"bbox":[676,516,238,137]}
+{"kind":"shape","id":"sh/d8bat47y","slide":3,"bbox":[694,607,202,30]}
+{"kind":"textbox","id":"sh/knih4byh","slide":3,"text":"Orders","textPreview":"Orders","textChars":6,"textLines":1,"bbox":[706,613,178,20]}
+{"kind":"shape","id":"sh/vu9knih4","slide":3,"bbox":[982,516,238,137]}
+{"kind":"shape","id":"sh/d0z61032","slide":3,"bbox":[1000,607,202,30]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":3,"text":"Admin users","textPreview":"Admin users","textChars":11,"textLines":1,"bbox":[1012,613,178,20]}
+{"kind":"textbox","id":"sh/vixczed8","slide":3,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/czed8v6p","slide":3,"name":"","geometry":"roundRect","alt":"Login screenshot","bbox":[65,520,230,129]}
+{"kind":"image","id":"im/cbulwval","slide":3,"name":"","geometry":"roundRect","alt":"Dashboard screenshot","bbox":[372,520,230,129]}
+{"kind":"image","id":"im/xs72x4na","slide":3,"name":"","geometry":"roundRect","alt":"Orders screenshot","bbox":[680,520,230,129]}
+{"kind":"image","id":"im/1gvy90je","slide":3,"name":"","geometry":"roundRect","alt":"Admin users screenshot","bbox":[986,520,230,129]}
+{"kind":"notes","id":"nt/fbvcq9","slide":3,"text":""}
+{"kind":"slide","id":"sl/urvdwz","slide":4,"title":"Authentication, Security and Profile","textShapes":13}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":4,"text":"Authentication, Security and Profile","textPreview":"Authentication, Security and Profile","textChars":36,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":4,"text":"Member 2 module: user entry, account recovery, session protection and profile maintenance.","textPreview":"Member 2 module: user entry, account recovery, session protection and profile maintenance.","textChars":90,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":4,"bbox":[66,146,268,154]}
+{"kind":"shape","id":"sh/y90je9cv","slide":4,"bbox":[84,254,232,30]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":4,"text":"Sign in","textPreview":"Sign in","textChars":7,"textLines":1,"bbox":[96,260,208,20]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":4,"bbox":[356,146,268,154]}
+{"kind":"shape","id":"sh/u54zidon","slide":4,"bbox":[374,254,232,30]}
+{"kind":"textbox","id":"sh/cbulwval","slide":4,"text":"Register","textPreview":"Register","textChars":8,"textLines":1,"bbox":[386,260,208,20]}
+{"kind":"shape","id":"sh/5sneloj2","slide":4,"bbox":[66,334,268,154]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":4,"bbox":[84,442,232,30]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":4,"text":"Password reset","textPreview":"Password reset","textChars":14,"textLines":1,"bbox":[96,448,208,20]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":4,"bbox":[356,334,268,154]}
+{"kind":"shape","id":"sh/neloj2t8","slide":4,"bbox":[374,442,232,30]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":4,"text":"Profile update","textPreview":"Profile update","textChars":14,"textLines":1,"bbox":[386,448,208,20]}
+{"kind":"shape","id":"sh/58z25kb6","slide":4,"bbox":[690,150,470,334]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":4,"text":"What this module demonstrates","textPreview":"What this module demonstrates","textChars":29,"textLines":1,"bbox":[720,180,380,32]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":4,"bbox":[724,243,10,10]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":4,"text":"Login, registration and forgot-password screens keep account access clear.","textPreview":"Login, registration and forgot-password screens keep account access clear.","textChars":74,"textLines":1,"bbox":[744,238,370,42]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":4,"bbox":[724,311,10,10]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":4,"text":"Session-based navigation separates protected customer pages from public pages.","textPreview":"Session-based navigation separates protected customer pages from public pages.","textChars":78,"textLines":1,"bbox":[744,306,370,42]}
+{"kind":"shape","id":"sh/0je9cvix","slide":4,"bbox":[724,379,10,10]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":4,"text":"Profile page allows account details and password changes from one place.","textPreview":"Profile page allows account details and password changes from one place.","textChars":72,"textLines":1,"bbox":[744,374,370,42]}
+{"kind":"shape","id":"sh/idonyd0z","slide":4,"bbox":[724,442,330,34]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":4,"text":"No code shown: behavior explained through screens","textPreview":"No code shown: behavior explained through screens","textChars":49,"textLines":1,"bbox":[738,450,302,18]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":4,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/61032lsz","slide":4,"name":"","geometry":"roundRect","alt":"Sign in screenshot","bbox":[70,150,260,146]}
+{"kind":"image","id":"im/6tovahoz","slide":4,"name":"","geometry":"roundRect","alt":"Register screenshot","bbox":[360,150,260,146]}
+{"kind":"image","id":"im/pwb2hwfy","slide":4,"name":"","geometry":"roundRect","alt":"Password reset screenshot","bbox":[70,338,260,146]}
+{"kind":"image","id":"im/p4r65wju","slide":4,"name":"","geometry":"roundRect","alt":"Profile update screenshot","bbox":[360,338,260,146]}
+{"kind":"notes","id":"nt/urvdwz","slide":4,"text":""}
+{"kind":"slide","id":"sl/nquxe7","slide":5,"title":"Product Catalogue and Discovery","textShapes":12}
+{"kind":"textbox","id":"sh/yd0z6103","slide":5,"text":"Product Catalogue and Discovery","textPreview":"Product Catalogue and Discovery","textChars":31,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":5,"text":"Member 3 module: browse, filter, inspect details, track ratings and add items to cart.","textPreview":"Member 3 module: browse, filter, inspect details, track ratings and add items to cart.","textChars":86,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":5,"bbox":[66,146,533,303]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":5,"bbox":[84,403,260,30]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":5,"text":"Catalogue and search","textPreview":"Catalogue and search","textChars":20,"textLines":1,"bbox":[96,409,240,20]}
+{"kind":"shape","id":"sh/g7adsji5","slide":5,"bbox":[636,146,533,303]}
+{"kind":"shape","id":"sh/yxobm58z","slide":5,"bbox":[654,403,260,30]}
+{"kind":"textbox","id":"sh/obm58z25","slide":5,"text":"Product detail","textPreview":"Product detail","textChars":14,"textLines":1,"bbox":[666,409,240,20]}
+{"kind":"shape","id":"sh/hwfyxobm","slide":5,"bbox":[90,490,330,112]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":5,"text":"Discovery tools","textPreview":"Discovery tools","textChars":15,"textLines":1,"bbox":[118,510,274,26]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":5,"text":"Search, categories, stock labels,\nratings and wishlist entry points.","textPreview":"Search, categories, stock labels, | ratings and wishlist entry points.","textChars":68,"textLines":2,"bbox":[118,546,274,46]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":5,"bbox":[475,490,330,112]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":5,"text":"Decision screen","textPreview":"Decision screen","textChars":15,"textLines":1,"bbox":[503,510,274,26]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":5,"text":"Product images, quantity, price,\nrating and add-to-cart action.","textPreview":"Product images, quantity, price, | rating and add-to-cart action.","textChars":63,"textLines":2,"bbox":[503,546,274,46]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":5,"bbox":[860,490,300,112]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":5,"text":"Customer value","textPreview":"Customer value","textChars":14,"textLines":1,"bbox":[888,510,244,26]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":5,"text":"Less friction from browsing\nthrough cart selection.","textPreview":"Less friction from browsing | through cart selection.","textChars":51,"textLines":2,"bbox":[888,546,244,46]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":5,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/cvixczed","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/a1gvy90j","slide":5,"name":"","geometry":"roundRect","alt":"Catalogue and search screenshot","bbox":[70,150,525,295]}
+{"kind":"image","id":"im/a5gbq1or","slide":5,"name":"","geometry":"roundRect","alt":"Product detail screenshot","bbox":[640,150,525,295]}
+{"kind":"notes","id":"nt/nquxe7","slide":5,"text":""}
+{"kind":"slide","id":"sl/lr78i7","slide":6,"title":"Wishlist, Ratings, Reviews and Image Upload","textShapes":10}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"Wishlist, Ratings, Reviews and Image Upload","textPreview":"Wishlist, Ratings, Reviews and Image Upload","textChars":43,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":6,"text":"Member 4 module: saved products, buyer feedback, star rating and optional review images.","textPreview":"Member 4 module: saved products, buyer feedback, star rating and optional review images.","textChars":88,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/vahoza1g","slide":6,"bbox":[66,146,508,290]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":6,"bbox":[84,390,260,30]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":6,"text":"Wishlist","textPreview":"Wishlist","textChars":8,"textLines":1,"bbox":[96,396,240,20]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":6,"bbox":[611,146,508,290]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":6,"bbox":[629,390,260,30]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":6,"text":"Reviews and upload","textPreview":"Reviews and upload","textChars":18,"textLines":1,"bbox":[641,396,240,20]}
+{"kind":"shape","id":"sh/sji5snel","slide":6,"bbox":[172,505,190,64]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":6,"text":"Product liked","textPreview":"Product liked","textChars":13,"textLines":1,"bbox":[186,520,162,38]}
+{"kind":"shape","id":"sh/adsji5sn","slide":6,"bbox":[362,535,72,4]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":6,"bbox":[434,505,210,64]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":6,"text":"Saved to wishlist","textPreview":"Saved to wishlist","textChars":17,"textLines":1,"bbox":[448,520,182,38]}
+{"kind":"shape","id":"sh/3m94fu18","slide":6,"bbox":[644,535,72,4]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":6,"bbox":[716,505,230,64]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":6,"text":"Review with stars\nand photo","textPreview":"Review with stars | and photo","textChars":27,"textLines":2,"bbox":[730,520,202,38]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":6,"bbox":[946,535,72,4]}
+{"kind":"shape","id":"sh/4zidonyd","slide":6,"bbox":[1018,505,190,64]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":6,"text":"Trust signal for\nfuture buyers","textPreview":"Trust signal for | future buyers","textChars":30,"textLines":2,"bbox":[1032,520,162,38]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":6,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/5o7qpg3e","slide":6,"name":"","geometry":"roundRect","alt":"Wishlist screenshot","bbox":[70,150,500,282]}
+{"kind":"image","id":"im/9s36hcrm","slide":6,"name":"","geometry":"roundRect","alt":"Reviews and upload screenshot","bbox":[615,150,500,282]}
+{"kind":"notes","id":"nt/lr78i7","slide":6,"text":""}
+{"kind":"slide","id":"sl/uoq3vx","slide":7,"title":"Cart and Pricing State","textShapes":12}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":7,"text":"Cart and Pricing State","textPreview":"Cart and Pricing State","textChars":22,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":7,"text":"Member 5 module: cart is maintained as a live state with quantity changes, remove actions and pricing totals.","textPreview":"Member 5 module: cart is maintained as a live state with quantity changes, remove actions and pricing totals.","textChars":109,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/i5sneloj","slide":7,"bbox":[66,146,508,290]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":7,"bbox":[84,390,260,30]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":7,"text":"Empty cart state","textPreview":"Empty cart state","textChars":16,"textLines":1,"bbox":[96,396,240,20]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":7,"bbox":[611,146,508,290]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":7,"bbox":[629,390,260,30]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":7,"text":"Filled cart and totals","textPreview":"Filled cart and totals","textChars":22,"textLines":1,"bbox":[641,396,240,20]}
+{"kind":"shape","id":"sh/72x4nap4","slide":7,"bbox":[115,500,290,92]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":7,"bbox":[133,529,34,34]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[144,535,16,18]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":7,"text":"Empty state guides users back to products","textPreview":"Empty state guides users back to products","textChars":41,"textLines":1,"bbox":[181,520,190,54]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":7,"bbox":[480,500,290,92]}
+{"kind":"shape","id":"sh/0z61032l","slide":7,"bbox":[498,529,34,34]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[509,535,16,18]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":7,"text":"Quantity controls update item subtotal","textPreview":"Quantity controls update item subtotal","textChars":38,"textLines":1,"bbox":[546,520,190,54]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":7,"bbox":[845,500,290,92]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":7,"bbox":[863,529,34,34]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[874,535,16,18]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":7,"text":"Order summary separates item amount, delivery, tax and total","textPreview":"Order summary separates item amount, delivery, tax and total","textChars":60,"textLines":1,"bbox":[911,520,190,54]}
+{"kind":"textbox","id":"sh/obm58z25","slide":7,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/svu9knih","slide":7,"name":"","geometry":"roundRect","alt":"Empty cart state screenshot","bbox":[70,150,500,282]}
+{"kind":"image","id":"im/sji5snel","slide":7,"name":"","geometry":"roundRect","alt":"Filled cart and totals screenshot","bbox":[615,150,500,282]}
+{"kind":"notes","id":"nt/uoq3vx","slide":7,"text":""}
+{"kind":"slide","id":"sl/06qcel","slide":8,"title":"Checkout, Orders and Razorpay","textShapes":11}
+{"kind":"textbox","id":"sh/3m94fu18","slide":8,"text":"Checkout, Orders and Razorpay","textPreview":"Checkout, Orders and Razorpay","textChars":29,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":8,"text":"Member 6 module: shipping details, payment gateway, order history and payment status tracking.","textPreview":"Member 6 module: shipping details, payment gateway, order history and payment status tracking.","textChars":94,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":8,"bbox":[66,144,528,300]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":8,"bbox":[84,398,260,30]}
+{"kind":"textbox","id":"sh/sji5snel","slide":8,"text":"Razorpay checkout","textPreview":"Razorpay checkout","textChars":17,"textLines":1,"bbox":[96,404,240,20]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":8,"bbox":[631,144,528,300]}
+{"kind":"shape","id":"sh/za1gvy90","slide":8,"bbox":[649,398,260,30]}
+{"kind":"textbox","id":"sh/z61032ls","slide":8,"text":"Order history","textPreview":"Order history","textChars":13,"textLines":1,"bbox":[661,404,240,20]}
+{"kind":"shape","id":"sh/al87ed8b","slide":8,"bbox":[112,515,150,58]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":8,"text":"Cart total","textPreview":"Cart total","textChars":10,"textLines":1,"bbox":[126,530,122,32]}
+{"kind":"shape","id":"sh/orytsvu9","slide":8,"bbox":[262,543,62,4]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":8,"bbox":[324,515,180,58]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":8,"text":"Shipping details","textPreview":"Shipping details","textChars":16,"textLines":1,"bbox":[338,530,152,32]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":8,"bbox":[504,543,62,4]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":8,"bbox":[566,515,190,58]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":8,"text":"Razorpay payment","textPreview":"Razorpay payment","textChars":16,"textLines":1,"bbox":[580,530,162,32]}
+{"kind":"shape","id":"sh/65wjudg7","slide":8,"bbox":[756,543,62,4]}
+{"kind":"shape","id":"sh/ed8bat47","slide":8,"bbox":[818,515,160,58]}
+{"kind":"textbox","id":"sh/7u54zido","slide":8,"text":"Order record","textPreview":"Order record","textChars":12,"textLines":1,"bbox":[832,530,132,32]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":8,"bbox":[978,543,62,4]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":8,"bbox":[1040,515,160,58]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":8,"text":"Status visible","textPreview":"Status visible","textChars":14,"textLines":1,"bbox":[1054,530,132,32]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":8,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/7ed8bat4","slide":8,"name":"","geometry":"roundRect","alt":"Razorpay checkout screenshot","bbox":[70,148,520,292]}
+{"kind":"image","id":"im/7qpg3ex0","slide":8,"name":"","geometry":"roundRect","alt":"Order history screenshot","bbox":[635,148,520,292]}
+{"kind":"notes","id":"nt/06qcel","slide":8,"text":""}
+{"kind":"slide","id":"sl/bvg54r","slide":9,"title":"Administration and Role-Based Access","textShapes":12}
+{"kind":"textbox","id":"sh/cvixczed","slide":9,"text":"Administration and Role-Based Access","textPreview":"Administration and Role-Based Access","textChars":36,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":9,"text":"Member 7 module: admin-only screens for products, users and store governance.","textPreview":"Member 7 module: admin-only screens for products, users and store governance.","textChars":77,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":9,"bbox":[66,146,508,290]}
+{"kind":"shape","id":"sh/cj6tovah","slide":9,"bbox":[84,390,260,30]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":9,"text":"Admin products","textPreview":"Admin products","textChars":14,"textLines":1,"bbox":[96,396,240,20]}
+{"kind":"shape","id":"sh/udg7adsj","slide":9,"bbox":[696,146,508,290]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":9,"bbox":[714,390,260,30]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":9,"text":"User management","textPreview":"User management","textChars":15,"textLines":1,"bbox":[726,396,240,20]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":9,"bbox":[110,498,280,96]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":9,"text":"Admin role","textPreview":"Admin role","textChars":10,"textLines":1,"bbox":[138,518,224,26]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":9,"text":"Maintains product records\nand user accounts.","textPreview":"Maintains product records | and user accounts.","textChars":44,"textLines":2,"bbox":[138,554,224,30]}
+{"kind":"shape","id":"sh/2t83itgf","slide":9,"bbox":[500,498,280,96]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":9,"text":"User role","textPreview":"User role","textChars":9,"textLines":1,"bbox":[528,518,224,26]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":9,"text":"Accesses catalogue, cart,\norders and profile.","textPreview":"Accesses catalogue, cart, | orders and profile.","textChars":45,"textLines":2,"bbox":[528,554,224,30]}
+{"kind":"shape","id":"sh/9knih4by","slide":9,"bbox":[890,498,280,96]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":9,"text":"Protected actions","textPreview":"Protected actions","textChars":17,"textLines":1,"bbox":[918,518,224,26]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":9,"text":"Actions appear only for\npermitted account roles.","textPreview":"Actions appear only for | permitted account roles.","textChars":48,"textLines":2,"bbox":[918,554,224,30]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":9,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/0rqd4vmt","slide":9,"name":"","geometry":"roundRect","alt":"Admin products screenshot","bbox":[70,150,500,282]}
+{"kind":"image","id":"im/032lszqt","slide":9,"name":"","geometry":"roundRect","alt":"User management screenshot","bbox":[700,150,500,282]}
+{"kind":"notes","id":"nt/bvg54r","slide":9,"text":""}
+{"kind":"slide","id":"sl/cvbqiq","slide":10,"title":"Admin Operations","textShapes":11}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":10,"text":"Admin Operations","textPreview":"Admin Operations","textChars":16,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":10,"text":"Role-based operation screens for product maintenance and cart visibility.","textPreview":"Role-based operation screens for product maintenance and cart visibility.","textChars":73,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":10,"bbox":[66,146,350,200]}
+{"kind":"shape","id":"sh/0je9cvix","slide":10,"bbox":[84,300,260,30]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":10,"text":"User carts","textPreview":"User carts","textChars":10,"textLines":1,"bbox":[96,306,240,20]}
+{"kind":"shape","id":"sh/idonyd0z","slide":10,"bbox":[464,146,350,200]}
+{"kind":"shape","id":"sh/0fepkzup","slide":10,"bbox":[482,300,260,30]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":10,"text":"Add product","textPreview":"Add product","textChars":11,"textLines":1,"bbox":[494,306,240,20]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":10,"bbox":[862,146,350,200]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":10,"bbox":[880,300,260,30]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":10,"text":"Edit product","textPreview":"Edit product","textChars":12,"textLines":1,"bbox":[892,306,240,20]}
+{"kind":"shape","id":"sh/72x4nap4","slide":10,"bbox":[90,392,1090,138]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":10,"text":"Operational coverage","textPreview":"Operational coverage","textChars":20,"textLines":1,"bbox":[120,430,320,30]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":10,"bbox":[125,483,10,10]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":10,"text":"Admin can add, edit, activate or deactivate products.","textPreview":"Admin can add, edit, activate or deactivate products.","textChars":53,"textLines":1,"bbox":[145,478,295,42]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":10,"bbox":[485,483,10,10]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":10,"text":"Cart oversight shows baskets, item counts and value.","textPreview":"Cart oversight shows baskets, item counts and value.","textChars":52,"textLines":1,"bbox":[505,478,295,42]}
+{"kind":"shape","id":"sh/ulwval87","slide":10,"bbox":[845,483,10,10]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":10,"text":"Customer and admin screens keep a consistent visual style.","textPreview":"Customer and admin screens keep a consistent visual style.","textChars":58,"textLines":1,"bbox":[865,478,295,42]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":10,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/w3m94fu1","slide":10,"name":"","geometry":"roundRect","alt":"User carts screenshot","bbox":[70,150,342,192]}
+{"kind":"image","id":"im/szqtcj6t","slide":10,"name":"","geometry":"roundRect","alt":"Add product screenshot","bbox":[468,150,342,192]}
+{"kind":"image","id":"im/z61032ls","slide":10,"name":"","geometry":"roundRect","alt":"Edit product screenshot","bbox":[866,150,342,192]}
+{"kind":"notes","id":"nt/cvbqiq","slide":10,"text":""}
+{"kind":"slide","id":"sl/39buud","slide":11,"title":"Operations, Database and Complete Integration","textShapes":15}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":11,"text":"Operations, Database and Complete Integration","textPreview":"Operations, Database and Complete Integration","textChars":45,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":11,"text":"Member 8 module: database-backed entities connect every screen into one full shopping journey.","textPreview":"Member 8 module: database-backed entities connect every screen into one full shopping journey.","textChars":94,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":11,"bbox":[230,225,80,4]}
+{"kind":"shape","id":"sh/z61032ls","slide":11,"bbox":[460,225,80,4]}
+{"kind":"shape","id":"sh/al87ed8b","slide":11,"bbox":[690,225,80,4]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":11,"bbox":[920,225,80,4]}
+{"kind":"shape","id":"sh/orytsvu9","slide":11,"bbox":[270,400,155,4]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":11,"bbox":[575,400,80,4]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":11,"bbox":[805,400,80,4]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":11,"bbox":[155,260,4,105]}
+{"kind":"shape","id":"sh/1gvy90je","slide":11,"bbox":[385,260,4,105]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":11,"bbox":[730,260,4,105]}
+{"kind":"shape","id":"sh/je9cvixc","slide":11,"bbox":[80,190,150,70]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":11,"text":"User","textPreview":"User","textChars":4,"textLines":1,"bbox":[94,205,122,44]}
+{"kind":"shape","id":"sh/xs72x4na","slide":11,"bbox":[310,190,150,70]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":11,"text":"Product","textPreview":"Product","textChars":7,"textLines":1,"bbox":[324,205,122,44]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":11,"bbox":[540,190,150,70]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":11,"text":"Cart","textPreview":"Cart","textChars":4,"textLines":1,"bbox":[554,205,122,44]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":11,"bbox":[770,190,150,70]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":11,"text":"Order","textPreview":"Order","textChars":5,"textLines":1,"bbox":[784,205,122,44]}
+{"kind":"shape","id":"sh/svu9knih","slide":11,"bbox":[1000,190,150,70]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":11,"text":"Payment","textPreview":"Payment","textChars":7,"textLines":1,"bbox":[1014,205,122,44]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":11,"bbox":[195,365,150,70]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":11,"text":"Wishlist","textPreview":"Wishlist","textChars":8,"textLines":1,"bbox":[209,380,122,44]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":11,"bbox":[425,365,150,70]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":11,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[439,380,122,44]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":11,"bbox":[655,365,150,70]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":11,"text":"Admin","textPreview":"Admin","textChars":5,"textLines":1,"bbox":[669,380,122,44]}
+{"kind":"shape","id":"sh/s72x4nap","slide":11,"bbox":[885,365,150,70]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":11,"text":"Uploads","textPreview":"Uploads","textChars":7,"textLines":1,"bbox":[899,380,122,44]}
+{"kind":"shape","id":"sh/vu9knih4","slide":11,"bbox":[88,512,1030,86]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":11,"text":"Integration outcome","textPreview":"Integration outcome","textChars":19,"textLines":1,"bbox":[118,536,220,24]}
+{"kind":"textbox","id":"sh/d0z61032","slide":11,"text":"Authentication identifies users, products feed the catalogue, cart state produces checkout totals, payments create orders, and reviews/wishlist enrich the customer experience.","textPreview":"Authentication identifies users, products feed the catalogue, cart state produces checkout totals, payments create orders, and reviews/wi...","textChars":175,"textLines":1,"bbox":[350,528,720,48]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":11,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"notes","id":"nt/39buud","slide":11,"text":""}
+{"kind":"slide","id":"sl/uh1347","slide":12,"title":"Conclusion","textShapes":13}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":12,"text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[64,44,820,58]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":12,"text":"Mercato demonstrates a complete e-commerce workflow from account access to admin-managed operations.","textPreview":"Mercato demonstrates a complete e-commerce workflow from account access to admin-managed operations.","textChars":100,"textLines":1,"bbox":[66,98,900,36]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":12,"bbox":[66,146,328,188]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":12,"bbox":[84,288,260,30]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":12,"text":"Home","textPreview":"Home","textChars":4,"textLines":1,"bbox":[96,294,240,20]}
+{"kind":"shape","id":"sh/8bat47y1","slide":12,"bbox":[426,146,328,188]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":12,"bbox":[444,288,260,30]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":12,"text":"Cart","textPreview":"Cart","textChars":4,"textLines":1,"bbox":[456,294,240,20]}
+{"kind":"shape","id":"sh/58z25kb6","slide":12,"bbox":[786,146,328,188]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":12,"bbox":[804,288,260,30]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":12,"text":"Payment","textPreview":"Payment","textChars":7,"textLines":1,"bbox":[816,294,240,20]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":12,"bbox":[105,395,330,132]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":12,"text":"Project result","textPreview":"Project result","textChars":14,"textLines":1,"bbox":[133,415,274,26]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":12,"text":"A working full stack shopping\nsystem with customer, order,\npayment, review and admin modules.","textPreview":"A working full stack shopping | system with customer, order, | payment, review and admin modules.","textChars":93,"textLines":3,"bbox":[133,451,274,66]}
+{"kind":"shape","id":"sh/cbulwval","slide":12,"bbox":[475,395,330,132]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":12,"text":"Future scope","textPreview":"Future scope","textChars":12,"textLines":1,"bbox":[503,415,274,26]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":12,"text":"Small next step: analytics,\nrecommendations and shipment\ntracking.","textPreview":"Small next step: analytics, | recommendations and shipment | tracking.","textChars":66,"textLines":3,"bbox":[503,451,274,66]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":12,"bbox":[845,395,330,132]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":12,"text":"Thank you","textPreview":"Thank you","textChars":9,"textLines":1,"bbox":[873,415,274,26]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":12,"text":"Presented by the\n8-member project team.","textPreview":"Presented by the | 8-member project team.","textChars":39,"textLines":2,"bbox":[873,451,274,66]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":12,"text":"Mercato E-Commerce Full Stack Project","textPreview":"Mercato E-Commerce Full Stack Project","textChars":37,"textLines":1,"bbox":[64,682,420,22]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,678,48,24]}
+{"kind":"image","id":"im/y90je9cv","slide":12,"name":"","geometry":"roundRect","alt":"Home screenshot","bbox":[70,150,320,180]}
+{"kind":"image","id":"im/u54zidon","slide":12,"name":"","geometry":"roundRect","alt":"Cart screenshot","bbox":[430,150,320,180]}
+{"kind":"image","id":"im/d8v6psfi","slide":12,"name":"","geometry":"roundRect","alt":"Payment screenshot","bbox":[790,150,320,180]}
+{"kind":"notes","id":"nt/uh1347","slide":12,"text":""}

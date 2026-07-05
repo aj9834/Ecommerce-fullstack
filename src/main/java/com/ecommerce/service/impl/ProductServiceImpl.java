@@ -4,6 +4,7 @@ import com.ecommerce.dto.ProductRequest;
 import com.ecommerce.dto.ProductResponse;
 import com.ecommerce.entity.Product;
 import com.ecommerce.repository.ProductRepository;
+import com.ecommerce.repository.ReviewRepository;
 import com.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,8 @@ public class ProductServiceImpl implements ProductService {
 
 	@Autowired
 	private ProductRepository productRepository;
+	@Autowired
+	private ReviewRepository reviewRepository;
 
 	// Reusable mapper — converts entity to response DTO
 	private ProductResponse mapToResponse(Product product) {
@@ -29,6 +32,9 @@ public class ProductServiceImpl implements ProductService {
 		response.setImageUrl(product.getImageUrl());
 		response.setActive(product.getActive());
 		response.setCreatedAt(product.getCreatedAt());
+		Double averageRating = reviewRepository.findAverageRatingByProduct(product);
+		response.setAverageRating(averageRating == null ? 0.0 : Math.round(averageRating * 10.0) / 10.0);
+		response.setReviewCount(reviewRepository.countByProduct(product));
 		return response;
 	}
 

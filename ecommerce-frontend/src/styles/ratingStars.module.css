@@ -1,0 +1,45 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 1px;
+  letter-spacing: -0.04em;
+}
+
+.filled {
+  color: #f59e0b;
+}
+
+.empty {
+  color: #d6ddd9;
+}
+
+.rating strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.small {
+  gap: 4px;
+  font-size: 12px;
+}
+
+.small strong,
+.small .count {
+  font-size: 11px;
+}
+
+:global(html[data-theme="dark"]) .empty {
+  color: #415049;
+}

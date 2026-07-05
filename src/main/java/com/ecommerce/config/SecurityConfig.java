@@ -35,6 +35,7 @@ public class SecurityConfig {
 						// Public
 						.requestMatchers("/api/auth/register", "/api/auth/login", "/api/auth/forgot-password",
 								"/api/auth/reset-password").permitAll()
+						.requestMatchers(HttpMethod.GET, "/uploads/**").permitAll()
 						// Products GET — public browsing
 						.requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
 						// Admin only routes

@@ -13,6 +13,8 @@ public class ProductResponse {
 	private String imageUrl;
 	private Boolean active;
 	private LocalDateTime createdAt;
+	private Double averageRating = 0.0;
+	private Long reviewCount = 0L;
 
 	@java.lang.SuppressWarnings("all")
 	public ProductResponse() {
@@ -63,6 +65,14 @@ public class ProductResponse {
 		return this.createdAt;
 	}
 
+	public Double getAverageRating() {
+		return averageRating;
+	}
+
+	public Long getReviewCount() {
+		return reviewCount;
+	}
+
 	@java.lang.SuppressWarnings("all")
 	public void setProductId(final Long productId) {
 		this.productId = productId;
@@ -106,6 +116,14 @@ public class ProductResponse {
 	@java.lang.SuppressWarnings("all")
 	public void setCreatedAt(final LocalDateTime createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public void setAverageRating(Double averageRating) {
+		this.averageRating = averageRating;
+	}
+
+	public void setReviewCount(Long reviewCount) {
+		this.reviewCount = reviewCount;
 	}
 
 	@java.lang.Override

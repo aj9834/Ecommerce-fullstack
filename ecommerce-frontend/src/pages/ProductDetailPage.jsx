@@ -4,6 +4,12 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../api/productApi";
 import useFavorites from "../hooks/useFavorites";
+import RatingStars from "../components/RatingStars";
+import {
+  getProductReviews,
+  getReviewImageUrl,
+  saveProductReview,
+} from "../api/reviewApi";
 
 const fallbackImage = "https://placehold.co/900x700/e9f6f3/14532d?text=Product";
 const MotionArticle = motion.article;
@@ -59,6 +65,17 @@ export default function ProductDetailPage() {
   const [added, setAdded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [reviewData, setReviewData] = useState({
+    reviews: [],
+    averageRating: 0,
+    reviewCount: 0,
+  });
+  const [reviewRating, setReviewRating] = useState(5);
+  const [reviewComment, setReviewComment] = useState("");
+  const [reviewImage, setReviewImage] = useState(null);
+  const [reviewPreview, setReviewPreview] = useState("");
+  const [submittingReview, setSubmittingReview] = useState(false);
+  const [reviewMessage, setReviewMessage] = useState("");
   const {
     isFavorite,
     toggleFavorite,
@@ -68,8 +85,17 @@ export default function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await getProductById(id);
-        setProduct(res.data);
+        const [productResponse, reviewResponse] = await Promise.all([
+          getProductById(id),
+          getProductReviews(id),
+        ]);
+        setProduct(productResponse.data);
+        setReviewData(reviewResponse.data);
+        const ownReview = reviewResponse.data.reviews.find((review) => review.ownReview);
+        if (ownReview) {
+          setReviewRating(ownReview.rating);
+          setReviewComment(ownReview.comment);
+        }
         setSelectedIndex(0);
       } catch {
         setError("Product not found.");
@@ -97,6 +123,51 @@ export default function ProductDetailPage() {
     } catch (err) {
       const msg = err.response?.data?.error || "Failed to add to cart";
       alert(msg);
+    }
+  };
+
+  const handleReviewImage = (event) => {
+    const file = event.target.files?.[0] || null;
+    setReviewImage(file);
+    setReviewMessage("");
+    if (!file) {
+      setReviewPreview("");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => setReviewPreview(String(reader.result || ""));
+    reader.readAsDataURL(file);
+  };
+
+  const handleReviewSubmit = async (event) => {
+    event.preventDefault();
+    if (!reviewComment.trim()) {
+      setReviewMessage("Please write a comment before submitting.");
+      return;
+    }
+
+    setSubmittingReview(true);
+    setReviewMessage("");
+    const formData = new FormData();
+    formData.append("rating", String(reviewRating));
+    formData.append("comment", reviewComment.trim());
+    if (reviewImage) formData.append("image", reviewImage);
+
+    try {
+      const response = await saveProductReview(product.productId, formData);
+      setReviewData(response.data);
+      setProduct((current) => ({
+        ...current,
+        averageRating: response.data.averageRating,
+        reviewCount: response.data.reviewCount,
+      }));
+      setReviewImage(null);
+      setReviewPreview("");
+      setReviewMessage("Your review has been saved.");
+    } catch (err) {
+      setReviewMessage(err.response?.data?.error || "Could not save your review.");
+    } finally {
+      setSubmittingReview(false);
     }
   };
 
@@ -245,6 +316,10 @@ export default function ProductDetailPage() {
             >
               {product.description}
             </p>
+            <RatingStars
+              rating={reviewData.averageRating || product.averageRating}
+              reviewCount={reviewData.reviewCount || product.reviewCount}
+            />
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -312,6 +387,156 @@ export default function ProductDetailPage() {
             </MotionButton>
           </div>
         </MotionArticle>
+      </section>
+
+      <section className="mt-10 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <form
+          onSubmit={handleReviewSubmit}
+          className="h-fit rounded-2xl border border-white/80 bg-white/75 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-7"
+        >
+          <span className="text-xs font-black uppercase tracking-[0.12em] text-orange-600">
+            Share your experience
+          </span>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-950">
+            Rate & review this product
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-slate-500">
+            Your review is connected to your account. Submitting again updates it.
+          </p>
+
+          <div className="mt-6">
+            <span className="mb-2 block text-sm font-black text-slate-700">Your rating</span>
+            <div className="flex gap-1" role="radiogroup" aria-label="Product rating">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <button
+                  key={star}
+                  type="button"
+                  role="radio"
+                  aria-checked={reviewRating === star}
+                  aria-label={`${star} star${star > 1 ? "s" : ""}`}
+                  onClick={() => setReviewRating(star)}
+                  className={`text-3xl transition hover:-translate-y-0.5 ${
+                    star <= reviewRating ? "text-amber-500" : "text-slate-300"
+                  }`}
+                >
+                  ★
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <label className="mt-5 block">
+            <span className="mb-2 block text-sm font-black text-slate-700">Your comment</span>
+            <textarea
+              value={reviewComment}
+              onChange={(event) => setReviewComment(event.target.value)}
+              maxLength={2000}
+              rows={5}
+              placeholder="What did you like? How was the quality and delivery?"
+              className="w-full resize-y rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm leading-6 text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+            />
+          </label>
+
+          <label className="mt-5 block">
+            <span className="mb-2 block text-sm font-black text-slate-700">
+              Add a photo <span className="font-medium text-slate-400">(optional, max 5 MB)</span>
+            </span>
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+              onChange={handleReviewImage}
+              className="block w-full cursor-pointer rounded-xl border border-dashed border-slate-300 bg-white/70 p-3 text-sm text-slate-500 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-50 file:px-3 file:py-2 file:font-bold file:text-emerald-700"
+            />
+          </label>
+
+          {reviewPreview && (
+            <img
+              src={reviewPreview}
+              alt="Selected review upload preview"
+              className="mt-4 h-36 w-full rounded-xl object-cover"
+            />
+          )}
+
+          {reviewMessage && (
+            <p className={`mt-4 rounded-xl px-4 py-3 text-sm font-bold ${
+              reviewMessage.includes("saved")
+                ? "bg-emerald-50 text-emerald-700"
+                : "bg-rose-50 text-rose-700"
+            }`}>
+              {reviewMessage}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={submittingReview}
+            className="mt-5 w-full rounded-xl bg-emerald-800 px-5 py-3 font-black text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {submittingReview ? "Saving review..." : "Submit review"}
+          </button>
+        </form>
+
+        <div>
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <span className="text-xs font-black uppercase tracking-[0.12em] text-orange-600">
+                Customer feedback
+              </span>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950">
+                Reviews from buyers
+              </h2>
+            </div>
+            <RatingStars
+              rating={reviewData.averageRating}
+              reviewCount={reviewData.reviewCount}
+            />
+          </div>
+
+          <div className="space-y-4">
+            {reviewData.reviews.map((review) => (
+              <article
+                key={review.reviewId}
+                className="rounded-2xl border border-white/80 bg-white/70 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.06)] backdrop-blur-xl sm:p-6"
+              >
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-black text-slate-950">{review.userName}</h3>
+                      {review.ownReview && (
+                        <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-black uppercase text-emerald-700">
+                          Your review
+                        </span>
+                      )}
+                    </div>
+                    <div className="mt-1 text-amber-500" aria-label={`${review.rating} out of 5 stars`}>
+                      {"★".repeat(review.rating)}
+                      <span className="text-slate-300">{"★".repeat(5 - review.rating)}</span>
+                    </div>
+                  </div>
+                  <time className="text-xs font-bold text-slate-400">
+                    {new Date(review.updatedAt).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </time>
+                </div>
+
+                <p className="mt-4 whitespace-pre-wrap text-sm leading-7 text-slate-600">
+                  {review.comment}
+                </p>
+
+                {review.imageUrl && (
+                  <img
+                    src={getReviewImageUrl(review.imageUrl)}
+                    alt={`Photo shared by ${review.userName}`}
+                    className="mt-4 max-h-72 w-full rounded-xl object-cover sm:w-80"
+                  />
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );

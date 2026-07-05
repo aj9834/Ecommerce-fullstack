@@ -20,6 +20,8 @@ public class AdminServiceImpl implements AdminService {
 	private UserRepository userRepository;
 	@Autowired
 	private CartRepository cartRepository;
+	@Autowired
+	private ReviewRepository reviewRepository;
 
 	// ── Mappers ──────────────────────────────────────────
 
@@ -34,6 +36,9 @@ public class AdminServiceImpl implements AdminService {
 		r.setImageUrl(p.getImageUrl());
 		r.setActive(p.getActive());
 		r.setCreatedAt(p.getCreatedAt());
+		Double averageRating = reviewRepository.findAverageRatingByProduct(p);
+		r.setAverageRating(averageRating == null ? 0.0 : Math.round(averageRating * 10.0) / 10.0);
+		r.setReviewCount(reviewRepository.countByProduct(p));
 		return r;
 	}
 

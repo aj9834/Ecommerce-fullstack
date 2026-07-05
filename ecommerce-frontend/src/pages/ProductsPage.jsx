@@ -3,6 +3,7 @@ import { addToCart } from "../api/cartApi";
 import { getAllProducts, searchProducts } from "../api/productApi";
 import { useNavigate } from "react-router-dom";
 import useFavorites from "../hooks/useFavorites";
+import RatingStars from "../components/RatingStars";
 import styles from "../styles/products.module.css";
 
 export default function ProductsPage() {
@@ -192,6 +193,11 @@ export default function ProductsPage() {
               <div className={styles.cardBody}>
                 <span data-testid="product-category" className={styles.category}>{product.category}</span>
                 <h3 data-testid="product-name" className={styles.productName}>{product.name}</h3>
+                <RatingStars
+                  rating={product.averageRating}
+                  reviewCount={product.reviewCount}
+                  size="small"
+                />
                 <div className={styles.cardFooter}>
                   <span data-testid="product-price" className={styles.price}>₹{product.price}</span>
                   <span data-testid="product-stock" className={styles.stock}>

@@ -6,6 +6,8 @@ USE ecommerce_db;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
+DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS wishlist_items;
 DROP TABLE IF EXISTS cart_items;
 DROP TABLE IF EXISTS order_items;
 DROP TABLE IF EXISTS orders;
@@ -88,6 +90,29 @@ CREATE TABLE wishlist_items (
         FOREIGN KEY (product_id)
         REFERENCES products (product_id)
         ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE reviews (
+    review_id BIGINT NOT NULL AUTO_INCREMENT,
+    user_id BIGINT NOT NULL,
+    product_id BIGINT NOT NULL,
+    rating INT NOT NULL,
+    comment VARCHAR(2000) NOT NULL,
+    image_url VARCHAR(1000),
+    created_at DATETIME(6) NOT NULL,
+    updated_at DATETIME(6) NOT NULL,
+    PRIMARY KEY (review_id),
+    UNIQUE KEY uk_reviews_user_product (user_id, product_id),
+    KEY idx_reviews_product_id (product_id),
+    CONSTRAINT fk_reviews_user
+        FOREIGN KEY (user_id)
+        REFERENCES users (user_id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_reviews_product
+        FOREIGN KEY (product_id)
+        REFERENCES products (product_id)
+        ON DELETE CASCADE,
+    CONSTRAINT chk_reviews_rating CHECK (rating BETWEEN 1 AND 5)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE orders (

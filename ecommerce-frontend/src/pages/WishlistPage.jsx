@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../api/cartApi";
 import useFavorites from "../hooks/useFavorites";
+import RatingStars from "../components/RatingStars";
 import styles from "../styles/wishlist.module.css";
 
 const currencyFormatter = new Intl.NumberFormat("en-IN", {
@@ -102,6 +103,11 @@ export default function WishlistPage() {
               <div className={styles.body}>
                 <span className={styles.category}>{product.category}</span>
                 <h2>{product.name}</h2>
+                <RatingStars
+                  rating={product.averageRating}
+                  reviewCount={product.reviewCount}
+                  size="small"
+                />
                 <div className={styles.meta}>
                   <strong>{currencyFormatter.format(Number(product.price || 0))}</strong>
                   <span>{product.stock > 0 ? "In stock" : "Out of stock"}</span>
